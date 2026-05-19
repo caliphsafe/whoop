@@ -3,13 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Abdou Doumbouya | Performance Design System Lab</title>
-  <meta
-    name="description"
-    content="A performance-focused design portfolio by Abdou Doumbouya demonstrating lifecycle email, paid media, product launch systems, design systems, conversion optimization, and AI-assisted creative workflows."
-  />
-
+  <meta name="description" content="A role-specific performance design portfolio showing lifecycle email, paid media, landing page optimization, product launch systems, and scalable design thinking." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -18,13 +13,12 @@
 
   <header class="site-header">
     <a href="#top" class="logo">AD</a>
-
     <nav>
-      <a href="#system">System</a>
-      <a href="#email">Email</a>
-      <a href="#ads">Paid</a>
-      <a href="#launch">Launch</a>
-      <a href="#optimization">Optimize</a>
+      <a href="#email-lab">Email</a>
+      <a href="#ad-lab">Ads</a>
+      <a href="#launch-lab">Launch</a>
+      <a href="#optimization-lab">Optimize</a>
+      <a href="#system-lab">System</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
   </header>
@@ -33,257 +27,186 @@
 
     <section class="hero">
       <p class="eyebrow">Performance Design System Lab</p>
-
       <h1>
-        A portfolio built like a
-        <span>growth design assignment.</span>
+        A portfolio that shows the work
+        <span>inside the user journey.</span>
       </h1>
-
       <p class="hero-copy">
-        Instead of only showing past projects, this portfolio demonstrates the exact work I would create in a performance marketing design role: lifecycle emails, paid social systems, launch campaigns, conversion improvements, design tokens, responsive layouts, and testing logic.
+        This experience simulates the work I would create for a performance-driven brand: lifecycle emails, paid social tests, launch assets, conversion improvements, and scalable design systems.
       </p>
 
       <div class="hero-actions">
-        <a href="#email" class="button primary">View Role Simulation</a>
-        <a href="#optimization" class="button secondary">View Before / After</a>
+        <a href="#email-lab" class="button primary">Start the Journey</a>
+        <a href="#optimization-lab" class="button secondary">View Before / After</a>
       </div>
 
-      <div class="hero-dashboard">
-        <div class="metric-card active">
-          <span>Creative Goal</span>
-          <strong>Acquire</strong>
-          <small>Turn attention into qualified interest</small>
-        </div>
-
-        <div class="metric-card">
-          <span>Lifecycle Goal</span>
-          <strong>Retain</strong>
-          <small>Keep members engaged through education</small>
-        </div>
-
-        <div class="metric-card">
-          <span>System Goal</span>
-          <strong>Scale</strong>
-          <small>Create reusable campaign modules</small>
-        </div>
+      <div class="journey-strip">
+        <div><span>01</span>Email inbox</div>
+        <div><span>02</span>Opened email</div>
+        <div><span>03</span>Paid ad</div>
+        <div><span>04</span>Landing page</div>
+        <div><span>05</span>Conversion</div>
       </div>
     </section>
 
-    <section id="system" class="section">
+    <section id="email-lab" class="section lab-section">
       <div class="section-heading">
-        <p class="eyebrow">01 / Design System</p>
-        <h2>One creative system that scales across channels.</h2>
+        <p class="eyebrow">01 / Lifecycle Email Lab</p>
+        <h2>From subject line to opened email.</h2>
         <p>
-          This system is built for email, paid social, display ads, launch pages, CRM flows, and mobile placements. Each module is designed to be reused, tested, and optimized.
+          A lifecycle flow should not be judged only as a flat email design. The subject line, inbox preview, mobile scan path, CTA, and follow-up logic all work together.
         </p>
       </div>
 
-      <div class="system-grid">
-        <article class="system-card">
-          <span>Token 01</span>
-          <h3>Message hierarchy</h3>
-          <p>One headline, one proof point, one action. Every asset should be understood in seconds.</p>
-        </article>
+      <div class="lab-layout">
+        <div class="phone-ui inbox-ui">
+          <div class="phone-top"></div>
+          <div class="phone-header">
+            <span>Inbox</span>
+            <strong>Today</strong>
+          </div>
 
-        <article class="system-card">
-          <span>Token 02</span>
-          <h3>CTA system</h3>
-          <p>Primary CTAs drive action. Secondary CTAs support education without competing.</p>
-        </article>
+          <button class="inbox-item active" data-email="0">
+            <span>Performance Lab</span>
+            <strong>Your body has a dashboard.</strong>
+            <small>Start with your baseline: sleep, recovery, strain...</small>
+          </button>
 
-        <article class="system-card">
-          <span>Token 03</span>
-          <h3>Metric language</h3>
-          <p>Performance numbers become visual anchors for recovery, sleep, strain, stress, and healthspan.</p>
-        </article>
+          <button class="inbox-item" data-email="1">
+            <span>Performance Lab</span>
+            <strong>Recovery is readiness.</strong>
+            <small>Your score is more than a number. Here is what it means...</small>
+          </button>
 
-        <article class="system-card">
-          <span>Token 04</span>
-          <h3>Testing logic</h3>
-          <p>Every campaign can branch into emotional, data-led, and benefit-led variants.</p>
-        </article>
+          <button class="inbox-item" data-email="2">
+            <span>Performance Lab</span>
+            <strong>Build your rhythm.</strong>
+            <small>Your weekly patterns are showing a clear opportunity...</small>
+          </button>
+        </div>
+
+        <div class="email-reader">
+          <div class="reader-meta">
+            <span id="emailStep">Email 01 / Welcome</span>
+            <strong id="emailSubject">Your body has a dashboard.</strong>
+          </div>
+
+          <div class="email-design">
+            <p class="eyebrow small" id="emailKicker">Baseline Insight</p>
+            <h3 id="emailHeadline">Start reading the signals your body already gives you.</h3>
+            <p id="emailBody">
+              Your sleep, recovery, and strain create a daily performance profile. The goal is not more data. The goal is better decisions.
+            </p>
+
+            <div class="metric-module">
+              <span id="emailMetricLabel">Today’s Readiness</span>
+              <strong id="emailMetric">82%</strong>
+              <p id="emailMetricCopy">Your body is ready for higher output today.</p>
+            </div>
+
+            <button id="emailCta">See Your First Insight</button>
+          </div>
+
+          <div class="why-box">
+            <span>Why this performs better</span>
+            <p id="emailWhy">
+              The inbox preview creates curiosity, the opened email teaches the product value quickly, and the CTA moves the user into the app experience.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="email" class="section split-section">
-      <div class="section-copy">
-        <p class="eyebrow">02 / Lifecycle Email System</p>
-        <h2>A complete onboarding flow, not just one email.</h2>
+    <section id="ad-lab" class="section lab-section">
+      <div class="section-heading">
+        <p class="eyebrow">02 / Paid Social Lab</p>
+        <h2>Three ads, three audience motivations.</h2>
         <p>
-          This email series is designed to move a new user from curiosity to education to conversion. Each email has a clear job, a focused CTA, and mobile-first hierarchy.
+          Performance creative should be tested by angle. This set compares emotional motivation, benefit-led performance, and data-led proof.
         </p>
-
-        <ul class="clean-list">
-          <li>Email 01: Product value</li>
-          <li>Email 02: Recovery education</li>
-          <li>Email 03: Sleep and habit formation</li>
-          <li>Email 04: Membership conversion</li>
-          <li>Email 05: Re-engagement</li>
-        </ul>
       </div>
 
-      <div class="email-flow">
-        <article class="email-card">
-          <span>Email 01 / Welcome</span>
-          <h3>Your body has a dashboard. Start reading it.</h3>
-          <p>
-            Introduces the value of daily biometric feedback using a simple benefit-led message.
+      <div class="ad-lab-grid">
+        <div class="social-feed">
+          <button class="feed-ad active" data-ad="0">
+            <span>Emotion-led</span>
+            <strong>Your body has been trying to tell you something.</strong>
+            <small>Listen earlier. Recover smarter. Perform longer.</small>
+          </button>
+
+          <button class="feed-ad" data-ad="1">
+            <span>Benefit-led</span>
+            <strong>Train harder when your body is ready.</strong>
+            <small>Use recovery to guide output.</small>
+          </button>
+
+          <button class="feed-ad" data-ad="2">
+            <span>Data-led</span>
+            <strong>HRV down 18%? Adjust before burnout.</strong>
+            <small>Turn biometric trends into better decisions.</small>
+          </button>
+        </div>
+
+        <div class="ad-detail">
+          <p class="eyebrow small" id="adType">Variant A / Emotion-led</p>
+          <h3 id="adHeadline">Your body has been trying to tell you something.</h3>
+          <p id="adBody">This direction creates emotional curiosity and frames the product as a way to understand what the body is already signaling.</p>
+
+          <div class="landing-preview">
+            <span>Landing Page Preview</span>
+            <strong id="landingHeadline">Listen earlier. Recover smarter.</strong>
+            <p id="landingCopy">A focused landing hero that continues the same message from the ad click.</p>
+            <button id="landingCta">Learn More</button>
+          </div>
+
+          <div class="why-box">
+            <span>Testing hypothesis</span>
+            <p id="adWhy">This angle may perform well with users who feel stress, fatigue, or inconsistency but do not yet think in performance metrics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="launch-lab" class="section lab-section">
+      <div class="section-heading">
+        <p class="eyebrow">03 / Launch Campaign Lab</p>
+        <h2>One campaign idea across multiple environments.</h2>
+        <p>
+          A product launch needs consistency across email, paid media, landing pages, display placements, and mobile modules. This shows the same idea scaled across formats.
+        </p>
+      </div>
+
+      <div class="launch-tabs">
+        <button class="launch-tab active" data-channel="email">Email</button>
+        <button class="launch-tab" data-channel="social">Social</button>
+        <button class="launch-tab" data-channel="display">Display</button>
+        <button class="launch-tab" data-channel="landing">Landing</button>
+        <button class="launch-tab" data-channel="mobile">Mobile</button>
+      </div>
+
+      <div class="launch-stage">
+        <div class="launch-art" id="launchArt">
+          <span id="launchChannel">Email Header</span>
+          <h3 id="launchHeadline">Know your readiness before the day starts.</h3>
+          <p id="launchBody">Launch concept for a recovery intelligence feature that turns daily biometric data into a simple action plan.</p>
+          <button id="launchCta">See Today’s Readiness</button>
+        </div>
+
+        <div class="launch-notes">
+          <span>Scaling logic</span>
+          <p id="launchWhy">
+            The email version gives more context because the user has already opted into the relationship. It can educate before pushing the CTA.
           </p>
-          <div class="email-mock">
-            <strong>Today’s Focus</strong>
-            <p>Start with your baseline: sleep, recovery, and strain.</p>
-            <button>See Your First Insight</button>
-          </div>
-        </article>
-
-        <article class="email-card">
-          <span>Email 02 / Education</span>
-          <h3>Recovery is not rest. It is readiness.</h3>
-          <p>
-            Explains why recovery data matters and how it can influence smarter training decisions.
-          </p>
-          <div class="email-mock compact">
-            <strong>82% Recovery</strong>
-            <p>Your body is ready for higher output today.</p>
-            <button>View Recovery Trends</button>
-          </div>
-        </article>
-
-        <article class="email-card">
-          <span>Email 03 / Conversion</span>
-          <h3>Build a rhythm your body can sustain.</h3>
-          <p>
-            Moves from education into habit formation, personalized coaching, and membership value.
-          </p>
-          <div class="email-mock compact">
-            <strong>3 insights unlocked</strong>
-            <p>Sleep debt, strain balance, and recovery trend.</p>
-            <button>Unlock Your Plan</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="ads" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">03 / Paid Social Creative</p>
-        <h2>Three ad directions built for testing.</h2>
-        <p>
-          These concepts are designed as a testing set. Each one uses a different psychological angle so the growth team can learn what drives clicks, trials, and conversions.
-        </p>
-      </div>
-
-      <div class="ad-grid">
-        <article class="ad-card emotion">
-          <p>Variant A / Emotion-led</p>
-          <h3>Your body has been trying to tell you something.</h3>
-          <span>Listen earlier. Recover smarter. Perform longer.</span>
-          <button>Learn More</button>
-        </article>
-
-        <article class="ad-card performance">
-          <p>Variant B / Benefit-led</p>
-          <h3>Train harder when your body is ready.</h3>
-          <span>Use recovery, sleep, and strain to guide your output.</span>
-          <button>Start Tracking</button>
-        </article>
-
-        <article class="ad-card data">
-          <p>Variant C / Data-led</p>
-          <h3>HRV down 18%? Adjust before burnout.</h3>
-          <span>Turn biometric trends into better daily decisions.</span>
-          <button>See Your Trends</button>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <p class="eyebrow">04 / Display Ad System</p>
-        <h2>Modular display ads for multiple placements.</h2>
-        <p>
-          These banners use the same visual system, but adapt for different sizes, scan speeds, and CTA priorities.
-        </p>
-      </div>
-
-      <div class="display-grid">
-        <article class="display-banner wide">
-          <div>
-            <span>728 x 90</span>
-            <h3>Know when to push. Know when to recover.</h3>
-          </div>
-          <button>Start Free</button>
-        </article>
-
-        <article class="display-banner square">
-          <span>1:1 Social</span>
-          <h3>Sleep better. Strain smarter.</h3>
-          <p>Daily insights for long-term performance.</p>
-          <button>Try It</button>
-        </article>
-
-        <article class="display-banner story">
-          <span>Story Ad</span>
-          <h3>What is your body ready for today?</h3>
-          <button>Swipe Up</button>
-        </article>
-      </div>
-    </section>
-
-    <section id="launch" class="section launch-section">
-      <div class="section-heading">
-        <p class="eyebrow">05 / Product Launch Ecosystem</p>
-        <h2>One launch idea, built across the full funnel.</h2>
-        <p>
-          This launch system shows how one concept can scale from awareness to education to conversion across email, paid, landing, display, and mobile touchpoints.
-        </p>
-      </div>
-
-      <div class="launch-board">
-        <div class="launch-hero">
-          <p>Campaign Theme</p>
-          <h3>Know your readiness before the day starts.</h3>
-          <span>Launch concept for a recovery intelligence feature.</span>
-        </div>
-
-        <div class="launch-tile">
-          <span>Email Header</span>
-          <strong>Start with your recovery score.</strong>
-        </div>
-
-        <div class="launch-tile">
-          <span>Paid Social</span>
-          <strong>Your body’s green light.</strong>
-        </div>
-
-        <div class="launch-tile">
-          <span>Display Ad</span>
-          <strong>Ready is measurable.</strong>
-        </div>
-
-        <div class="launch-tile">
-          <span>Landing Hero</span>
-          <strong>Turn recovery into a training plan.</strong>
-        </div>
-
-        <div class="launch-tile">
-          <span>Mobile Module</span>
-          <strong>Today’s recommendation: build.</strong>
-        </div>
-
-        <div class="launch-tile">
-          <span>CTA System</span>
-          <strong>See Today’s Readiness</strong>
         </div>
       </div>
     </section>
 
-    <section id="optimization" class="section">
+    <section id="optimization-lab" class="section lab-section">
       <div class="section-heading">
-        <p class="eyebrow">06 / Before & After</p>
-        <h2>Optimization is where design becomes performance.</h2>
+        <p class="eyebrow">04 / Conversion Optimization</p>
+        <h2>Before and after with the reasoning visible.</h2>
         <p>
-          This sample shows how a cluttered marketing layout can be improved for clarity, CTA priority, mobile scanning, and conversion.
+          This section shows how a weak marketing layout becomes a performance-focused design through hierarchy, CTA priority, mobile scanning, and stronger proof.
         </p>
       </div>
 
@@ -300,10 +223,10 @@
           </div>
 
           <ul>
-            <li>Headline does not create urgency</li>
-            <li>CTA is buried below secondary content</li>
-            <li>Metric is not used as a proof point</li>
-            <li>Mobile scan path feels heavy</li>
+            <li>Headline does not create urgency.</li>
+            <li>CTA is buried under secondary content.</li>
+            <li>Metric is not used as proof.</li>
+            <li>Mobile scan path feels heavy.</li>
           </ul>
         </article>
 
@@ -318,83 +241,48 @@
           </div>
 
           <ul>
-            <li>Metric becomes the visual hook</li>
-            <li>CTA appears above the fold</li>
-            <li>Copy is short and benefit-led</li>
-            <li>Layout works better on mobile</li>
+            <li>Metric becomes the visual hook.</li>
+            <li>CTA appears above the fold.</li>
+            <li>Copy is short and benefit-led.</li>
+            <li>Layout works better on mobile.</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section id="responsive" class="section split-section">
-      <div class="section-copy">
-        <p class="eyebrow">07 / Responsive System</p>
-        <h2>Designed for the way people actually see campaigns.</h2>
-        <p>
-          A performance campaign has to work inside email clients, paid social feeds, landing pages, and small mobile screens. This system changes hierarchy by device instead of simply shrinking the same layout.
-        </p>
-      </div>
-
-      <div class="device-row">
-        <div class="desktop-frame">
-          <div class="frame-bar"></div>
-          <h3>Desktop</h3>
-          <p>More room for education, comparison, proof points, and campaign storytelling.</p>
-        </div>
-
-        <div class="phone-frame">
-          <div class="phone-speaker"></div>
-          <h3>Mobile</h3>
-          <p>Short headline, visible metric, thumb-friendly CTA, and faster decision path.</p>
-          <button>Take Action</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="ai" class="section ai-section">
+    <section id="system-lab" class="section lab-section">
       <div class="section-heading">
-        <p class="eyebrow">08 / AI Workflow</p>
-        <h2>Using AI to scale creative exploration without losing taste.</h2>
+        <p class="eyebrow">05 / Scalable Design System</p>
+        <h2>The system behind the creative.</h2>
         <p>
-          AI can speed up creative direction, prompt testing, copy territories, variation mapping, and production planning. The designer still owns the judgment, system, hierarchy, and final craft.
+          The work becomes scalable when the design language is modular: type scale, CTA rules, card components, metric modules, campaign variants, and production-ready handoff.
         </p>
       </div>
 
-      <div class="workflow-grid">
-        <div>Audience angle prompts</div>
-        <div>Email subject line variants</div>
-        <div>Paid ad concept territories</div>
-        <div>CTA testing matrix</div>
-        <div>Figma system refinement</div>
-        <div>Performance learning loop</div>
-      </div>
-    </section>
+      <div class="system-grid">
+        <article class="system-card">
+          <span>Type</span>
+          <h3>Short, strong hierarchy</h3>
+          <p>Large benefit-led headlines. Small supporting proof. Clear action text.</p>
+        </article>
 
-    <section id="about" class="section about-section">
-      <p class="eyebrow">09 / Positioning</p>
+        <article class="system-card">
+          <span>CTA</span>
+          <h3>One primary action</h3>
+          <p>Every asset gets one clear next step and avoids competing CTA weight.</p>
+        </article>
 
-      <h2>This portfolio is built to show how I think.</h2>
+        <article class="system-card">
+          <span>Metric</span>
+          <h3>Data as creative hook</h3>
+          <p>Recovery, sleep, strain, and stress become storytelling devices.</p>
+        </article>
 
-      <p>
-        The goal is not just to show finished visuals. It is to show how I approach business objectives, visual hierarchy, growth creative, responsive systems, audience psychology, creative testing, and scalable production.
-      </p>
-
-      <div class="about-grid">
-        <div>
-          <strong>Design Craft</strong>
-          <span>Typography, layout, hierarchy, color systems, and campaign visuals.</span>
-        </div>
-
-        <div>
-          <strong>Performance Thinking</strong>
-          <span>CTA strategy, testing logic, conversion hierarchy, and audience motivation.</span>
-        </div>
-
-        <div>
-          <strong>Creative Technology</strong>
-          <span>Figma-to-web thinking, AI workflows, rapid iteration, and production structure.</span>
-        </div>
+        <article class="system-card">
+          <span>Testing</span>
+          <h3>Variants by motivation</h3>
+          <p>Emotion-led, benefit-led, and data-led concepts give growth teams cleaner learning.</p>
+        </article>
       </div>
     </section>
 

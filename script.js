@@ -1,5 +1,5 @@
 const revealItems = document.querySelectorAll(
-  ".section, .journey-overview, .phone-shell, .email-reader, .ad-selector, .ad-stage, .membership-grid article, .launch-visual, .launch-copy, .before-card, .after-card"
+  ".section, .journey-overview, .phone-shell, .email-reader, .plan-preview, .ad-selector, .ad-stage, .journey-card, .before-card, .after-card"
 );
 
 revealItems.forEach((item) => item.classList.add("reveal"));
@@ -17,74 +17,100 @@ revealItems.forEach((item) => observer.observe(item));
 
 const emails = [
   {
-    stage: "Email 01 / Recovery",
-    subject: "Quantify how your body is feeling.",
-    preview: "Higher recovery means you are ready for more.",
+    stage: "Email 01 / Acquisition",
+    subject: "Your body has been trying to tell you something.",
+    preview: "Turn recovery, sleep, and strain into a daily decision.",
+    kicker: "Daily Readiness",
+    headline: "Turn body signals into better decisions.",
+    copy: "Your body is constantly responding to training, sleep, stress, illness, and daily habits. This campaign introduces WHOOP as the tool that turns those signals into a simple question: what are you ready for today?",
+    supplement: false,
     image: "img/whoop_quantify.png",
-    kicker: "Recovery Insight",
-    headline: "Higher recovery means you are ready for more.",
-    copy: "Understand how your body adapts to training, sleep deprivation, illness, or your cycle. When recovery is high, your body is signaling readiness. When it is low, the smarter move may be rest.",
-    metricLabel: "Today’s Signal",
+    metricLabel: "Campaign Hook",
     metric: "82%",
-    metricText: "Ready for higher output.",
-    cta: "View Recovery",
-    why: "This turns a technical recovery score into a simple daily decision. That makes the value easier to understand and increases the chance of a click."
+    metricText: "Recovery becomes a clear readiness signal.",
+    subhead: "Creative approach",
+    detail: "This is an acquisition email. The goal is to create curiosity without overwhelming the user with features. The email turns the product into a daily decision-making tool.",
+    cta: "Open Plan Page",
+    plan: "one",
+    planTitle: "Foundational performance path",
+    planWhy: "This email should land users on WHOOP One because the promise is broad: sleep, strain, recovery, coaching, and daily readiness.",
+    why: "This email is built to acquire users by making biometric tracking feel simple, useful, and personal."
   },
   {
-    stage: "Email 02 / Healthspan",
-    subject: "Extend your prime for years to come.",
-    preview: "See how daily habits impact your Pace of Aging.",
-    image: "img/whoop_age.png",
-    kicker: "Healthspan",
-    headline: "Your daily habits are shaping your long-term health.",
-    copy: "Healthspan gives members a new way to understand how behavior affects long-term wellness. The creative goal is to connect daily actions to a bigger emotional promise: staying capable for longer.",
-    metricLabel: "Pace of Aging",
-    metric: "0.86x",
-    metricText: "A lifestyle metric that makes longevity feel measurable.",
-    cta: "Explore Healthspan",
-    why: "This email connects a premium membership feature to a long-term lifestyle aspiration, which helps position WHOOP as more than a fitness tracker."
+    stage: "Email 02 / Education",
+    subject: "Recovery is not rest. It is readiness.",
+    preview: "Learn when to push, maintain, or back off.",
+    kicker: "Recovery Education",
+    headline: "Know when to push and when to recover.",
+    copy: "Recovery is the clearest way to explain the value of body data. This email teaches the user that higher recovery signals readiness for more output, while lower recovery can be a cue to rest, adjust, or protect long-term progress.",
+    supplement: true,
+    image: "img/whoop_quantify.png",
+    metricLabel: "Recovery Signal",
+    metric: "High",
+    metricText: "Ready for increased training load.",
+    subhead: "Creative approach",
+    detail: "This is a product education email. The supporting image helps explain the concept, but the main focus stays on the message, hierarchy, and CTA.",
+    cta: "Compare Memberships",
+    plan: "one",
+    planTitle: "Recovery-focused path",
+    planWhy: "The CTA can lead into WHOOP One because Recovery, Sleep, Strain, and coaching are the core educational value."
   },
   {
-    stage: "Email 03 / Sleep",
-    subject: "Optimize your sleep before tomorrow starts.",
-    preview: "Bed and wake recommendations built around recovery.",
+    stage: "Email 03 / Retention",
+    subject: "Tonight decides tomorrow’s output.",
+    preview: "A sleep plan designed around your body’s needs.",
+    kicker: "Sleep Retention",
+    headline: "Make sleep feel like a performance habit.",
+    copy: "This email is designed for retention. It gives members a reason to check in before bed by connecting sleep timing, sleep stages, recovery, and tomorrow’s performance.",
+    supplement: true,
     image: "img/whoop_sleep.png",
-    kicker: "Sleep Optimization",
-    headline: "Better sleep starts with better timing.",
-    copy: "WHOOP tracks sleep stages and recommends optimal bed and wake times. The design should make the user feel like the product is coaching them toward better recovery, not just reporting what happened.",
-    metricLabel: "Sleep Need",
+    metricLabel: "Tonight’s Sleep Need",
     metric: "7.8h",
-    metricText: "Recommended tonight for stronger recovery.",
-    cta: "Set Tonight’s Sleep Plan",
-    why: "This creates a useful next step. The user is not just reading about sleep. They are invited to act on it tonight."
+    metricText: "Recommended for stronger recovery.",
+    subhead: "Creative approach",
+    detail: "The email creates a repeatable habit loop: check your recommendation, follow the plan, see the recovery impact, repeat.",
+    cta: "Set Sleep Plan",
+    plan: "one",
+    planTitle: "Sleep and recovery path",
+    planWhy: "The landing step should reinforce foundational membership value because sleep and recovery are core daily-use features."
   },
   {
-    stage: "Email 04 / Strain",
-    subject: "Measure the impact of every step and rep.",
-    preview: "Your Strain Score shows how hard your body is working.",
-    image: "img/whoop_steps.png",
-    kicker: "Strain Score",
-    headline: "Every step, rep, and workout has a cost.",
-    copy: "Strain helps users understand how hard their heart, muscles, and body are working across the day. This campaign angle turns activity tracking into a smarter load-management story.",
-    metricLabel: "Today’s Strain",
-    metric: "14.6",
-    metricText: "Moderate to high training load.",
-    cta: "Review Activity Load",
-    why: "This makes effort visible. It encourages users to connect everyday movement to recovery and performance."
+    stage: "Email 04 / Upsell",
+    subject: "Your daily habits are shaping your long-term health.",
+    preview: "Healthspan turns longevity into something measurable.",
+    kicker: "Healthspan Upsell",
+    headline: "Extend your prime with long-term insight.",
+    copy: "This email is built for upgrading. Instead of only talking about fitness, it frames WHOOP as a long-term lifestyle system that helps members understand how daily habits affect Healthspan and Pace of Aging.",
+    supplement: false,
+    image: "img/whoop_age.png",
+    metricLabel: "Premium Feature",
+    metric: "Peak",
+    metricText: "Healthspan and Pace of Aging unlock higher-tier value.",
+    subhead: "Creative approach",
+    detail: "This approach makes the upgrade emotional and aspirational. It is not just more data. It is a way to stay capable for longer.",
+    cta: "Explore Peak",
+    plan: "peak",
+    planTitle: "Longevity path",
+    planWhy: "This email should land users on WHOOP Peak because Healthspan and Pace of Aging are the premium reasons to upgrade."
   },
   {
-    stage: "Email 05 / Membership",
-    subject: "Choose the membership that matches your goals.",
-    preview: "One, Peak, or Life: different levels of insight.",
-    image: "img/whoop_4x3.mp4",
+    stage: "Email 05 / Conversion",
+    subject: "Choose the insight level that fits your life.",
+    preview: "One, Peak, or Life: different levels of guidance.",
     kicker: "Membership Conversion",
-    headline: "Start with the insights that match your lifestyle.",
-    copy: "The membership email should help users understand the difference between foundational fitness insights, longevity features, and advanced health monitoring without overwhelming them.",
+    headline: "Make the membership decision feel simple.",
+    copy: "This email is for users who understand the value but need help choosing. The message organizes WHOOP around goals: foundational performance, longevity, or advanced health monitoring.",
+    supplement: false,
+    image: "img/whoop_4x3.mp4",
     metricLabel: "Starting At",
     metric: "$199",
-    metricText: "Annual membership options built around different goals.",
-    cta: "Compare Memberships",
-    why: "This converts product complexity into a guided decision, making the membership model easier to understand."
+    metricText: "Annual options built around different goals.",
+    subhead: "Creative approach",
+    detail: "The goal is to reduce decision friction by making each plan feel connected to a clear user motivation.",
+    cta: "Compare Plans",
+    plan: "life",
+    planTitle: "Full plan comparison",
+    planWhy: "This email should show all tiers clearly because the user is already close to conversion and needs confidence."
   }
 ];
 
@@ -102,6 +128,19 @@ emails.forEach((email, index) => {
   inboxList.appendChild(button);
 });
 
+function setPlan(plan) {
+  document.querySelectorAll(".plan-card").forEach((card) => card.classList.remove("active"));
+
+  const map = {
+    one: "planOne",
+    peak: "planPeak",
+    life: "planLife"
+  };
+
+  const target = document.getElementById(map[plan]);
+  if (target) target.classList.add("active");
+}
+
 function setEmail(index) {
   const email = emails[index];
 
@@ -116,11 +155,23 @@ function setEmail(index) {
   document.getElementById("emailMetricLabel").textContent = email.metricLabel;
   document.getElementById("emailMetric").textContent = email.metric;
   document.getElementById("emailMetricText").textContent = email.metricText;
+  document.getElementById("emailSubhead").textContent = email.subhead;
+  document.getElementById("emailDetail").textContent = email.detail;
   document.getElementById("emailCta").textContent = email.cta;
   document.getElementById("emailWhy").textContent = email.why;
+  document.getElementById("planTitle").textContent = email.planTitle;
+  document.getElementById("planWhy").textContent = email.planWhy;
 
-  const emailImage = document.getElementById("emailImage");
-  emailImage.src = email.image;
+  const supplement = document.getElementById("emailSupplement");
+  const image = document.getElementById("emailImage");
+
+  image.src = email.image;
+  supplement.classList.toggle("active", email.supplement);
+
+  setPlan(email.plan);
+
+  const scrollBox = document.querySelector(".email-scroll");
+  if (scrollBox) scrollBox.scrollTop = 0;
 }
 
 document.querySelectorAll(".inbox-item").forEach((item) => {
@@ -129,64 +180,64 @@ document.querySelectorAll(".inbox-item").forEach((item) => {
 
 const ads = [
   {
-    label: "Recovery / Mobile Feed",
+    label: "Acquisition",
     title: "What is your body ready for today?",
-    preview: "Fast hook for users who want a daily decision.",
+    preview: "Simple question. Broad audience.",
     video: "img/whoop_9x16.mp4",
     mobileHeadline: "What is your body ready for today?",
-    mobileCopy: "Recovery turns body data into a decision you can use.",
+    mobileCopy: "Turn recovery, sleep, and strain into a daily decision.",
     desktopHeadline: "Know when to push. Know when to recover.",
-    desktopCopy: "A clean display ad that makes recovery feel actionable.",
+    desktopCopy: "A broad acquisition message that simplifies body data into one useful action.",
     cta: "Start Tracking",
-    why: "This angle simplifies complex body data into one daily question, which is useful for broad acquisition."
+    why: "This angle is built for broad acquisition because the question is easy to understand even without product knowledge."
   },
   {
-    label: "Healthspan / Desktop",
-    title: "Extend your prime for years to come.",
-    preview: "Longevity-focused angle for Peak membership.",
-    video: "img/whoop_16x9_1.mp4",
-    mobileHeadline: "Your habits are shaping your future body.",
-    mobileCopy: "Healthspan makes longevity feel measurable.",
-    desktopHeadline: "Extend your prime for years to come.",
-    desktopCopy: "A premium lifestyle message built around Healthspan and Pace of Aging.",
-    cta: "Explore Healthspan",
-    why: "This supports higher-tier membership positioning by connecting daily behaviors to long-term identity."
-  },
-  {
-    label: "Sleep / Retention",
-    title: "Optimize your sleep before tomorrow starts.",
-    preview: "Useful evening campaign for engagement.",
+    label: "Retention",
+    title: "Tonight decides tomorrow’s output.",
+    preview: "Habit loop around sleep.",
     video: "img/whoop_4x3.mp4",
-    mobileHeadline: "Tonight’s sleep affects tomorrow’s output.",
-    mobileCopy: "Get bed and wake guidance based on your body.",
+    mobileHeadline: "Tonight decides tomorrow.",
+    mobileCopy: "Use sleep guidance to improve tomorrow’s recovery.",
     desktopHeadline: "Sleep better. Recover stronger.",
-    desktopCopy: "A retention-focused campaign that gives users a reason to check in before bed.",
+    desktopCopy: "A retention-focused campaign that gives members a reason to check in every night.",
     cta: "Set Sleep Plan",
-    why: "This creates a recurring use case, which supports habit formation and retention."
+    why: "This approach supports retention because it creates a recurring daily behavior."
   },
   {
-    label: "Strain / Activity",
+    label: "Upsell",
+    title: "Extend your prime for years to come.",
+    preview: "Peak membership angle.",
+    video: "img/whoop_16x9_1.mp4",
+    mobileHeadline: "Extend your prime.",
+    mobileCopy: "Healthspan turns daily habits into long-term insight.",
+    desktopHeadline: "Extend your prime for years to come.",
+    desktopCopy: "A premium lifestyle message that connects Healthspan to higher-tier membership value.",
+    cta: "Explore Peak",
+    why: "This campaign can help move users toward Peak by connecting features to aspiration."
+  },
+  {
+    label: "Performance",
     title: "Measure every step and rep.",
-    preview: "Performance-focused message for active users.",
+    preview: "Activity-focused users.",
     video: "img/whoop_16x9_2.mp4",
     mobileHeadline: "Every rep has a cost.",
     mobileCopy: "Strain shows how hard your body is working.",
     desktopHeadline: "Measure the impact of every step and rep.",
-    desktopCopy: "A clear performance message for users who already train or track activity.",
+    desktopCopy: "A performance-focused campaign for users who care about training load.",
     cta: "Review Strain",
-    why: "This angle speaks to athletes and active users who want feedback on training load."
+    why: "This speaks to active users who already care about effort, output, and training consistency."
   },
   {
-    label: "Membership / Conversion",
+    label: "Conversion",
     title: "Choose the insight level that fits your life.",
-    preview: "One, Peak, and Life comparison campaign.",
+    preview: "Plan comparison campaign.",
     video: "img/whoop_9x16.mp4",
     mobileHeadline: "Fitness. Longevity. Advanced health.",
-    mobileCopy: "Find the WHOOP membership built around your goals.",
+    mobileCopy: "Find the membership built around your goals.",
     desktopHeadline: "Choose the insight level that fits your life.",
-    desktopCopy: "A conversion-focused ad that helps reduce decision friction around memberships.",
+    desktopCopy: "A conversion-focused plan campaign that reduces decision friction.",
     cta: "Compare Plans",
-    why: "This turns pricing tiers into a goal-based decision, which can make the membership model easier to understand."
+    why: "This turns pricing tiers into goal-based options, which makes the membership decision clearer."
   }
 ];
 
@@ -222,75 +273,4 @@ function setAd(index) {
 
 document.querySelectorAll(".ad-option").forEach((item) => {
   item.addEventListener("click", () => setAd(Number(item.dataset.ad)));
-});
-
-const launches = {
-  email: {
-    label: "Email Campaign",
-    video: "img/whoop_4x3.mp4",
-    headline: "Quantify how your body is feeling.",
-    copy: "A lifecycle email angle that teaches Recovery as a daily readiness signal.",
-    cta: "View Recovery",
-    why: "Email gives the most room to educate, so this version explains what the metric means and why it matters."
-  },
-  social: {
-    label: "Paid Social",
-    video: "img/whoop_9x16.mp4",
-    headline: "Your body’s green light.",
-    copy: "A mobile-first feed concept built for speed, style, and quick comprehension.",
-    cta: "Start Tracking",
-    why: "Social needs a faster hook, so the idea becomes short, visual, and emotionally direct."
-  },
-  display: {
-    label: "Display Ad",
-    video: "img/whoop_16x9_2.mp4",
-    headline: "Ready is measurable.",
-    copy: "A compact desktop message that can work across banner and retargeting environments.",
-    cta: "Try WHOOP",
-    why: "Display ads need instant clarity, so the copy is compressed into a simple performance promise."
-  },
-  landing: {
-    label: "Landing Page Hero",
-    video: "img/whoop_16x9_1.mp4",
-    headline: "Extend your prime for years to come.",
-    copy: "A Healthspan landing concept connecting daily habits to long-term performance and Pace of Aging.",
-    cta: "Explore Healthspan",
-    why: "Landing pages can carry more explanation and can connect features to the membership value."
-  },
-  mobile: {
-    label: "Mobile App Module",
-    video: "img/whoop_9x16.mp4",
-    headline: "Today’s recommendation: build.",
-    copy: "A compact module that turns body data into a clear next action.",
-    cta: "View Plan",
-    why: "The mobile module is focused on action because the user is already in a decision-making environment."
-  }
-};
-
-const launchTabs = document.getElementById("launchTabs");
-
-Object.keys(launches).forEach((key, index) => {
-  const button = document.createElement("button");
-  button.className = `launch-tab ${index === 0 ? "active" : ""}`;
-  button.dataset.launch = key;
-  button.textContent = launches[key].label;
-  launchTabs.appendChild(button);
-});
-
-function setLaunch(key) {
-  const item = launches[key];
-
-  document.querySelectorAll(".launch-tab").forEach((tab) => tab.classList.remove("active"));
-  document.querySelector(`[data-launch="${key}"]`).classList.add("active");
-
-  document.getElementById("launchVideo").src = item.video;
-  document.getElementById("launchChannel").textContent = item.label;
-  document.getElementById("launchHeadline").textContent = item.headline;
-  document.getElementById("launchCopy").textContent = item.copy;
-  document.getElementById("launchCta").textContent = item.cta;
-  document.getElementById("launchWhy").textContent = item.why;
-}
-
-document.querySelectorAll(".launch-tab").forEach((tab) => {
-  tab.addEventListener("click", () => setLaunch(tab.dataset.launch));
 });

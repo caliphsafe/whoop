@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Abdou Doumbouya | Performance Design Lab</title>
-  <meta name="description" content="A role-specific performance design portfolio showing lifecycle email, paid media, landing pages, membership conversion, and campaign optimization." />
+  <meta name="description" content="A role-specific performance design portfolio showing lifecycle email, paid media, landing pages, membership conversion, campaign optimization, and design strategy." />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+
   <header class="site-header">
     <a href="#top" class="brand-lockup">
-      <img src="img/whoop_logo.png" alt="WHOOP logo" />
+      <img src="img/whoop_logo_black.png" alt="WHOOP logo" />
       <span>Performance Design Lab</span>
     </a>
 
     <nav>
       <a href="#email-lab">Email</a>
       <a href="#ad-lab">Ads</a>
-      <a href="#journey-lab">Journey</a>
-      <a href="#optimization-lab">Optimize</a>
+      <a href="#optimization-lab">Before / After</a>
+      <a href="#designer-lab">Designer</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
   </header>
@@ -31,41 +34,52 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Role Simulation Portfolio</p>
-        <h1>Lifecycle creative built inside the customer journey.</h1>
+        <h1>Showing the work behind performance creative.</h1>
         <p>
-          A WHOOP-inspired performance design experience showing how I would think through email, paid media, retention, landing pages, plan comparison, and conversion-focused design systems.
+          This is a guided portfolio experience built around the type of work required for a growth-focused graphic design role: lifecycle email, paid media, responsive design, testing logic, conversion improvements, scalable systems, and brand storytelling.
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="#email-lab">Start With Email</a>
-          <a class="btn secondary" href="#optimization-lab">View Improvements</a>
+          <a class="btn primary" href="#email-lab">Start Walkthrough</a>
+          <a class="btn secondary" href="#designer-lab">Read Cover Letter</a>
         </div>
       </div>
 
-      <div class="hero-media">
+      <div class="hero-media glass-card">
         <video src="img/whoop_16x9_2.mp4" autoplay muted loop playsinline></video>
+        <div class="hero-media-caption">
+          <span>Creative premise</span>
+          <strong>Translate body data into action, habit, and membership value.</strong>
+        </div>
       </div>
     </section>
 
-    <section class="journey-overview">
-      <article><span>01</span>Inbox subject</article>
-      <article><span>02</span>Opened email</article>
-      <article><span>03</span>Click action</article>
-      <article><span>04</span>Plan page</article>
-      <article><span>05</span>Conversion logic</article>
+    <section class="process-strip glass-card">
+      <article><span>01</span>Find the user moment</article>
+      <article><span>02</span>Clarify the message</article>
+      <article><span>03</span>Design the environment</article>
+      <article><span>04</span>Connect the CTA</article>
+      <article><span>05</span>Optimize for learning</article>
     </section>
 
     <section id="email-lab" class="section">
       <div class="section-heading">
         <p class="eyebrow">01 / Lifecycle Email Lab</p>
-        <h2>Email shown in the real journey.</h2>
+        <h2>Email as a journey, not a flat graphic.</h2>
         <p>
-          Click through five lifecycle campaigns. Each shows the subject line in an inbox, the opened email in a controlled scroll window, and the landing or membership page that follows the CTA.
+          The goal is to show how I think through the complete path: inbox subject line, preview text, opened email, scroll behavior, CTA, and the plan page the user reaches after clicking.
+        </p>
+      </div>
+
+      <div class="walkthrough-note glass-card">
+        <span>Process note</span>
+        <p>
+          I’m treating each email like a conversion moment. The creative job changes depending on the user: acquisition needs curiosity, retention needs habit, upsell needs aspiration, and conversion needs clarity.
         </p>
       </div>
 
       <div class="email-lab">
-        <aside class="phone-shell">
+        <aside class="phone-shell glass-card">
           <div class="phone-speaker"></div>
           <div class="phone-header">
             <span>Inbox</span>
@@ -75,7 +89,7 @@
           <div class="inbox-list" id="inboxList"></div>
         </aside>
 
-        <article class="email-reader">
+        <article class="email-reader glass-card">
           <div class="email-top">
             <span id="emailStage">Email 01 / Acquisition</span>
             <strong id="emailSubject">Your body has been trying to tell you something.</strong>
@@ -94,7 +108,7 @@
                 <img id="emailImage" src="img/whoop_quantify.png" alt="Supporting campaign visual" />
               </div>
 
-              <div class="metric-card">
+              <div class="metric-card dark">
                 <span id="emailMetricLabel">Campaign Hook</span>
                 <strong id="emailMetric">82%</strong>
                 <p id="emailMetricText">Recovery becomes a clear readiness signal.</p>
@@ -119,7 +133,7 @@
           </div>
         </article>
 
-        <aside class="plan-preview">
+        <aside class="plan-preview glass-card">
           <div class="plan-preview-top">
             <span>After Email Click</span>
             <strong id="planTitle">Recommended path</strong>
@@ -156,16 +170,23 @@
     <section id="ad-lab" class="section">
       <div class="section-heading">
         <p class="eyebrow">02 / Paid Media Lab</p>
-        <h2>Mobile feed ad and desktop ad shown together.</h2>
+        <h2>Same message, different attention span.</h2>
         <p>
-          Each ad concept adapts the same message for two environments: a fast mobile feed and a wider desktop placement.
+          Paid creative has to adapt to where it appears. The mobile feed version has seconds to hook attention. The desktop version can carry more context, proof, and product explanation.
+        </p>
+      </div>
+
+      <div class="walkthrough-note glass-card">
+        <span>Process note</span>
+        <p>
+          Instead of making one “nice” ad, I would build a test set: acquisition, retention, upsell, performance, and conversion. Each one has a different audience motivation and learning goal.
         </p>
       </div>
 
       <div class="ad-lab">
-        <aside class="ad-selector" id="adSelector"></aside>
+        <aside class="ad-selector glass-card" id="adSelector"></aside>
 
-        <div class="ad-stage">
+        <div class="ad-stage glass-card">
           <div class="mobile-feed-ad">
             <video id="adMobileVideo" src="img/whoop_9x16.mp4" autoplay muted loop playsinline></video>
             <div class="mobile-ad-copy">
@@ -195,80 +216,121 @@
       </div>
     </section>
 
-    <section id="journey-lab" class="section">
+    <section id="optimization-lab" class="section">
       <div class="section-heading">
-        <p class="eyebrow">03 / Campaign Journey</p>
-        <h2>From campaign promise to membership decision.</h2>
+        <p class="eyebrow">03 / Before and After Lab</p>
+        <h2>A weaker campaign rebuilt for performance.</h2>
         <p>
-          This shows how a creative idea connects from email or ad click into a landing page and plan comparison experience.
+          This section shows the difference between making something look branded and making something work. The “before” is intentionally realistic: visually acceptable, but not strategically clear. The “after” solves the pain points.
         </p>
       </div>
 
-      <div class="journey-grid">
-        <article class="journey-card">
-          <span>Step 01</span>
-          <h3>Hook</h3>
-          <p>Lead with a question, metric, or benefit that makes the user want to know more.</p>
+      <div class="optimization-grid">
+        <article class="campaign-before glass-card">
+          <div class="audit-label">Before Campaign</div>
+          <h3>Track more. Train better. Sleep better.</h3>
+          <p>
+            Get insights into your body with sleep, strain, recovery, coaching, health, stress, heart rate, and performance features.
+          </p>
+
+          <div class="before-creative">
+            <div class="before-hero-block"></div>
+            <div class="before-text-line wide"></div>
+            <div class="before-text-line"></div>
+            <div class="before-button"></div>
+          </div>
+
+          <ul class="pain-list">
+            <li><strong>Problem:</strong> Too many benefits compete for attention.</li>
+            <li><strong>Problem:</strong> No single reason to click right now.</li>
+            <li><strong>Problem:</strong> Product features are listed instead of translated into user value.</li>
+            <li><strong>Problem:</strong> CTA is generic and not connected to the message.</li>
+          </ul>
         </article>
 
-        <article class="journey-card">
-          <span>Step 02</span>
-          <h3>Educate</h3>
-          <p>Explain the value of Recovery, Sleep, Strain, Healthspan, or coaching in plain language.</p>
-        </article>
+        <article class="campaign-after glass-card">
+          <div class="audit-label">After Campaign</div>
+          <h3>What is your body ready for today?</h3>
+          <p>
+            Recovery, sleep, and strain become one simple daily decision: push, maintain, or recover.
+          </p>
 
-        <article class="journey-card">
-          <span>Step 03</span>
-          <h3>Match</h3>
-          <p>Guide users toward One, Peak, or Life based on the goal that brought them in.</p>
-        </article>
+          <div class="after-creative dark">
+            <span>Today’s Readiness</span>
+            <strong>82%</strong>
+            <p>Your body is ready for higher output.</p>
+            <button>View Today’s Plan</button>
+          </div>
 
-        <article class="journey-card">
-          <span>Step 04</span>
-          <h3>Convert</h3>
-          <p>Make the next step clear with one primary CTA and a plan that feels aligned.</p>
+          <ul class="pain-list resolved">
+            <li><strong>Resolved:</strong> One clear hook replaces a feature dump.</li>
+            <li><strong>Resolved:</strong> Metric creates proof and urgency.</li>
+            <li><strong>Resolved:</strong> User benefit is immediate and easy to understand.</li>
+            <li><strong>Resolved:</strong> CTA leads naturally into a plan or app action.</li>
+          </ul>
         </article>
+      </div>
+
+      <div class="result-panel glass-card">
+        <span>Expected performance lift</span>
+        <div>
+          <strong>Clearer scan path</strong>
+          <p>Users understand the value in seconds.</p>
+        </div>
+        <div>
+          <strong>Stronger CTA logic</strong>
+          <p>The button continues the promise instead of interrupting it.</p>
+        </div>
+        <div>
+          <strong>Reusable system</strong>
+          <p>The same structure can scale into email, ad, app module, and landing hero.</p>
+        </div>
       </div>
     </section>
 
-    <section id="optimization-lab" class="section">
+    <section id="designer-lab" class="section designer-section">
       <div class="section-heading">
-        <p class="eyebrow">04 / Before and After</p>
-        <h2>Improving creative for clarity and conversion.</h2>
+        <p class="eyebrow">04 / Designer Note</p>
+        <h2>The thinking behind the work.</h2>
         <p>
-          A generic layout becomes a stronger performance asset when the message, metric, CTA, and scan path work together.
+          This section reframes the portfolio as a cover letter and process statement. The goal is to make clear that I understand the role beyond execution: strategy, testing, systems, collaboration, and performance outcomes.
         </p>
       </div>
 
-      <div class="before-after">
-        <article class="before-card">
-          <span>Before</span>
-          <h3>Generic product promo</h3>
-          <div class="messy-email">
-            <div></div><div></div><div></div><div></div>
+      <div class="designer-grid">
+        <article class="designer-card glass-card">
+          <span>About Abdou</span>
+          <h3>Performance-focused digital designer & creative technologist.</h3>
+          <p>
+            I design responsive brand experiences, websites, campaign systems, and conversion-focused interfaces. My background sits between graphic design, UX, web, branding, and creative technology, which lets me think beyond a single asset and understand the full digital journey.
+          </p>
+
+          <div class="skill-tags">
+            <span>Lifecycle Email</span>
+            <span>Paid Creative</span>
+            <span>UX/UI</span>
+            <span>Figma</span>
+            <span>Adobe Suite</span>
+            <span>AI Workflows</span>
+            <span>Responsive Design</span>
+            <span>Creative Systems</span>
           </div>
-          <ul>
-            <li>Too many competing messages</li>
-            <li>No clear metric hook</li>
-            <li>CTA feels disconnected</li>
-            <li>Harder to scan on mobile</li>
-          </ul>
         </article>
 
-        <article class="after-card">
-          <span>After</span>
-          <h3>Metric-led conversion module</h3>
-          <div class="clean-email">
-            <strong>82% Recovery</strong>
-            <p>Your body is ready for higher output today.</p>
-            <button>View Today’s Plan</button>
-          </div>
-          <ul>
-            <li>Metric becomes the headline</li>
-            <li>Benefit is immediate</li>
-            <li>CTA is visible above the fold</li>
-            <li>Message works across email, app, and paid media</li>
-          </ul>
+        <article class="cover-letter glass-card">
+          <span>Cover Letter</span>
+          <h3>Why I built this portfolio this way.</h3>
+          <p>
+            I wanted this application to show more than a collection of finished visuals. For a role built around email, paid media, performance marketing, testing, and scalable design systems, I felt the strongest way to present myself was to build a working example of how I think.
+          </p>
+
+          <p>
+            My approach is to start with the user moment, define the business goal, simplify the message, design the asset in context, and then connect that asset to the next step in the journey. Whether the goal is acquisition, retention, upgrade, or conversion, I care about how the creative performs, not just how it looks.
+          </p>
+
+          <p>
+            I bring a hybrid design background that combines brand craft, responsive web thinking, fast iteration, AI-assisted exploration, and production-level attention to detail. I’m interested in WHOOP because the product sits at the intersection of data, behavior, performance, health, and lifestyle. That is exactly the type of brand world where strong design can make complex information feel simple, motivating, and valuable.
+          </p>
         </article>
       </div>
     </section>

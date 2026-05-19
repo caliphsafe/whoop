@@ -1,5 +1,5 @@
 const revealItems = document.querySelectorAll(
-  ".section, .journey-overview, .phone-shell, .email-reader, .plan-preview, .ad-selector, .ad-stage, .journey-card, .before-card, .after-card"
+  ".section, .process-strip, .phone-shell, .email-reader, .plan-preview, .ad-selector, .ad-stage, .campaign-before, .campaign-after, .result-panel, .designer-card, .cover-letter"
 );
 
 revealItems.forEach((item) => item.classList.add("reveal"));
@@ -15,6 +15,12 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
+const header = document.querySelector(".site-header");
+
+window.addEventListener("scroll", () => {
+  header.classList.toggle("scrolled", window.scrollY > 40);
+});
+
 const emails = [
   {
     stage: "Email 01 / Acquisition",
@@ -28,7 +34,7 @@ const emails = [
     metricLabel: "Campaign Hook",
     metric: "82%",
     metricText: "Recovery becomes a clear readiness signal.",
-    subhead: "Creative approach",
+    subhead: "Why this approach works",
     detail: "This is an acquisition email. The goal is to create curiosity without overwhelming the user with features. The email turns the product into a daily decision-making tool.",
     cta: "Open Plan Page",
     plan: "one",
@@ -48,12 +54,13 @@ const emails = [
     metricLabel: "Recovery Signal",
     metric: "High",
     metricText: "Ready for increased training load.",
-    subhead: "Creative approach",
+    subhead: "Why this approach works",
     detail: "This is a product education email. The supporting image helps explain the concept, but the main focus stays on the message, hierarchy, and CTA.",
     cta: "Compare Memberships",
     plan: "one",
     planTitle: "Recovery-focused path",
-    planWhy: "The CTA can lead into WHOOP One because Recovery, Sleep, Strain, and coaching are the core educational value."
+    planWhy: "The CTA can lead into WHOOP One because Recovery, Sleep, Strain, and coaching are the core educational value.",
+    why: "This teaches the product value before asking for conversion, which supports trust and retention."
   },
   {
     stage: "Email 03 / Retention",
@@ -67,12 +74,13 @@ const emails = [
     metricLabel: "Tonight’s Sleep Need",
     metric: "7.8h",
     metricText: "Recommended for stronger recovery.",
-    subhead: "Creative approach",
+    subhead: "Why this approach works",
     detail: "The email creates a repeatable habit loop: check your recommendation, follow the plan, see the recovery impact, repeat.",
     cta: "Set Sleep Plan",
     plan: "one",
     planTitle: "Sleep and recovery path",
-    planWhy: "The landing step should reinforce foundational membership value because sleep and recovery are core daily-use features."
+    planWhy: "The landing step should reinforce foundational membership value because sleep and recovery are core daily-use features.",
+    why: "This supports retention by giving the user a reason to return to the product at night."
   },
   {
     stage: "Email 04 / Upsell",
@@ -86,12 +94,13 @@ const emails = [
     metricLabel: "Premium Feature",
     metric: "Peak",
     metricText: "Healthspan and Pace of Aging unlock higher-tier value.",
-    subhead: "Creative approach",
+    subhead: "Why this approach works",
     detail: "This approach makes the upgrade emotional and aspirational. It is not just more data. It is a way to stay capable for longer.",
     cta: "Explore Peak",
     plan: "peak",
     planTitle: "Longevity path",
-    planWhy: "This email should land users on WHOOP Peak because Healthspan and Pace of Aging are the premium reasons to upgrade."
+    planWhy: "This email should land users on WHOOP Peak because Healthspan and Pace of Aging are the premium reasons to upgrade.",
+    why: "This connects plan value to aspiration, making the upsell feel more meaningful."
   },
   {
     stage: "Email 05 / Conversion",
@@ -105,12 +114,13 @@ const emails = [
     metricLabel: "Starting At",
     metric: "$199",
     metricText: "Annual options built around different goals.",
-    subhead: "Creative approach",
+    subhead: "Why this approach works",
     detail: "The goal is to reduce decision friction by making each plan feel connected to a clear user motivation.",
     cta: "Compare Plans",
     plan: "life",
     planTitle: "Full plan comparison",
-    planWhy: "This email should show all tiers clearly because the user is already close to conversion and needs confidence."
+    planWhy: "This email should show all tiers clearly because the user is close to conversion and needs confidence.",
+    why: "This email converts pricing into goal-based choice, which makes the membership model easier to understand."
   }
 ];
 

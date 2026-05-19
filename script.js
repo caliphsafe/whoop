@@ -1,5 +1,5 @@
 const revealItems = document.querySelectorAll(
-  ".section, .metric-card, .system-card, .email-card, .ad-card, .launch-hero, .launch-tile, .audit-card, .desktop-frame, .phone-frame, .workflow-grid div, .about-grid div"
+  ".section, .metric-card, .system-card, .email-card, .ad-card, .display-banner, .launch-hero, .launch-tile, .audit-card, .desktop-frame, .phone-frame, .workflow-grid div, .about-grid div"
 );
 
 revealItems.forEach((item) => {

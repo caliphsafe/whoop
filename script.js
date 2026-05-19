@@ -1,5 +1,5 @@
 const revealItems = document.querySelectorAll(
-  ".section, .process-strip, .phone-shell, .email-reader, .plan-preview, .ad-selector, .ad-stage, .campaign-before, .campaign-after, .result-panel, .designer-card, .cover-letter"
+  ".section, .process-strip, .mail-app, .mobile-mail-demo, .ad-selector, .ad-stage, .campaign-before, .campaign-after, .designer-card, .cover-letter"
 );
 
 revealItems.forEach((item) => item.classList.add("reveal"));
@@ -23,7 +23,7 @@ window.addEventListener("scroll", () => {
 
 const emails = [
   {
-    stage: "Email 01 / Acquisition",
+    stage: "Acquisition",
     subject: "Your body has been trying to tell you something.",
     preview: "Turn recovery, sleep, and strain into a daily decision.",
     kicker: "Daily Readiness",
@@ -37,13 +37,10 @@ const emails = [
     subhead: "Why this approach works",
     detail: "This is an acquisition email. The goal is to create curiosity without overwhelming the user with features. The email turns the product into a daily decision-making tool.",
     cta: "Open Plan Page",
-    plan: "one",
-    planTitle: "Foundational performance path",
-    planWhy: "This email should land users on WHOOP One because the promise is broad: sleep, strain, recovery, coaching, and daily readiness.",
     why: "This email is built to acquire users by making biometric tracking feel simple, useful, and personal."
   },
   {
-    stage: "Email 02 / Education",
+    stage: "Education",
     subject: "Recovery is not rest. It is readiness.",
     preview: "Learn when to push, maintain, or back off.",
     kicker: "Recovery Education",
@@ -55,15 +52,12 @@ const emails = [
     metric: "High",
     metricText: "Ready for increased training load.",
     subhead: "Why this approach works",
-    detail: "This is a product education email. The supporting image helps explain the concept, but the main focus stays on the message, hierarchy, and CTA.",
+    detail: "This is a product education email. The supporting visual helps explain the concept, but the main focus stays on the message, hierarchy, and CTA.",
     cta: "Compare Memberships",
-    plan: "one",
-    planTitle: "Recovery-focused path",
-    planWhy: "The CTA can lead into WHOOP One because Recovery, Sleep, Strain, and coaching are the core educational value.",
     why: "This teaches the product value before asking for conversion, which supports trust and retention."
   },
   {
-    stage: "Email 03 / Retention",
+    stage: "Retention",
     subject: "Tonight decides tomorrow’s output.",
     preview: "A sleep plan designed around your body’s needs.",
     kicker: "Sleep Retention",
@@ -77,13 +71,10 @@ const emails = [
     subhead: "Why this approach works",
     detail: "The email creates a repeatable habit loop: check your recommendation, follow the plan, see the recovery impact, repeat.",
     cta: "Set Sleep Plan",
-    plan: "one",
-    planTitle: "Sleep and recovery path",
-    planWhy: "The landing step should reinforce foundational membership value because sleep and recovery are core daily-use features.",
     why: "This supports retention by giving the user a reason to return to the product at night."
   },
   {
-    stage: "Email 04 / Upsell",
+    stage: "Upsell",
     subject: "Your daily habits are shaping your long-term health.",
     preview: "Healthspan turns longevity into something measurable.",
     kicker: "Healthspan Upsell",
@@ -97,13 +88,10 @@ const emails = [
     subhead: "Why this approach works",
     detail: "This approach makes the upgrade emotional and aspirational. It is not just more data. It is a way to stay capable for longer.",
     cta: "Explore Peak",
-    plan: "peak",
-    planTitle: "Longevity path",
-    planWhy: "This email should land users on WHOOP Peak because Healthspan and Pace of Aging are the premium reasons to upgrade.",
     why: "This connects plan value to aspiration, making the upsell feel more meaningful."
   },
   {
-    stage: "Email 05 / Conversion",
+    stage: "Conversion",
     subject: "Choose the insight level that fits your life.",
     preview: "One, Peak, or Life: different levels of guidance.",
     kicker: "Membership Conversion",
@@ -117,48 +105,42 @@ const emails = [
     subhead: "Why this approach works",
     detail: "The goal is to reduce decision friction by making each plan feel connected to a clear user motivation.",
     cta: "Compare Plans",
-    plan: "life",
-    planTitle: "Full plan comparison",
-    planWhy: "This email should show all tiers clearly because the user is close to conversion and needs confidence.",
     why: "This email converts pricing into goal-based choice, which makes the membership model easier to understand."
   }
 ];
 
-const inboxList = document.getElementById("inboxList");
+const campaignList = document.getElementById("campaignList");
+const mobileCampaignList = document.getElementById("mobileCampaignList");
 
-emails.forEach((email, index) => {
+function createCampaignButton(email, index, mobile = false) {
   const button = document.createElement("button");
-  button.className = `inbox-item ${index === 0 ? "active" : ""}`;
+  button.className = `${mobile ? "mobile-campaign" : "mail-campaign"} ${index === 0 ? "active" : ""}`;
   button.dataset.email = index;
   button.innerHTML = `
     <span>${email.stage}</span>
     <strong>${email.subject}</strong>
     <small>${email.preview}</small>
   `;
-  inboxList.appendChild(button);
-});
-
-function setPlan(plan) {
-  document.querySelectorAll(".plan-card").forEach((card) => card.classList.remove("active"));
-
-  const map = {
-    one: "planOne",
-    peak: "planPeak",
-    life: "planLife"
-  };
-
-  const target = document.getElementById(map[plan]);
-  if (target) target.classList.add("active");
+  return button;
 }
+
+emails.forEach((email, index) => {
+  campaignList.appendChild(createCampaignButton(email, index));
+  mobileCampaignList.appendChild(createCampaignButton(email, index, true));
+});
 
 function setEmail(index) {
   const email = emails[index];
 
-  document.querySelectorAll(".inbox-item").forEach((item) => item.classList.remove("active"));
-  document.querySelector(`[data-email="${index}"]`).classList.add("active");
+  document.querySelectorAll(".mail-campaign, .mobile-campaign").forEach((item) => {
+    item.classList.remove("active");
+  });
 
-  document.getElementById("emailStage").textContent = email.stage;
-  document.getElementById("emailSubject").textContent = email.subject;
+  document.querySelectorAll(`[data-email="${index}"]`).forEach((item) => {
+    item.classList.add("active");
+  });
+
+  document.getElementById("openedSubject").textContent = email.subject;
   document.getElementById("emailKicker").textContent = email.kicker;
   document.getElementById("emailHeadline").textContent = email.headline;
   document.getElementById("emailCopy").textContent = email.copy;
@@ -169,8 +151,14 @@ function setEmail(index) {
   document.getElementById("emailDetail").textContent = email.detail;
   document.getElementById("emailCta").textContent = email.cta;
   document.getElementById("emailWhy").textContent = email.why;
-  document.getElementById("planTitle").textContent = email.planTitle;
-  document.getElementById("planWhy").textContent = email.planWhy;
+
+  document.getElementById("mobileEmailSubject").textContent = email.subject;
+  document.getElementById("mobileEmailKicker").textContent = email.kicker;
+  document.getElementById("mobileEmailHeadline").textContent = email.headline;
+  document.getElementById("mobileEmailCopy").textContent = email.copy;
+  document.getElementById("mobileMetricLabel").textContent = email.metricLabel;
+  document.getElementById("mobileMetric").textContent = email.metric;
+  document.getElementById("mobileMetricText").textContent = email.metricText;
 
   const supplement = document.getElementById("emailSupplement");
   const image = document.getElementById("emailImage");
@@ -178,14 +166,16 @@ function setEmail(index) {
   image.src = email.image;
   supplement.classList.toggle("active", email.supplement);
 
-  setPlan(email.plan);
-
-  const scrollBox = document.querySelector(".email-scroll");
+  const scrollBox = document.querySelector(".opened-email-scroll");
   if (scrollBox) scrollBox.scrollTop = 0;
+
+  const mobileScroll = document.querySelector(".mobile-open-scroll");
+  if (mobileScroll) mobileScroll.scrollTop = 0;
 }
 
-document.querySelectorAll(".inbox-item").forEach((item) => {
-  item.addEventListener("click", () => setEmail(Number(item.dataset.email)));
+document.addEventListener("click", (event) => {
+  const emailButton = event.target.closest(".mail-campaign, .mobile-campaign");
+  if (emailButton) setEmail(Number(emailButton.dataset.email));
 });
 
 const ads = [

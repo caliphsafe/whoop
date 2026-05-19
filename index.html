@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Abdou Doumbouya | WHOOP Performance Design Lab</title>
-  <meta name="description" content="A WHOOP-inspired performance design portfolio by Abdou Doumbouya showing email, paid social, lifecycle marketing, launch systems, and conversion optimization." />
+  <title>Abdou Doumbouya | Performance Design Lab</title>
+  <meta name="description" content="A role-specific performance design portfolio showing lifecycle email, paid media, landing pages, membership conversion, and campaign optimization." />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,15 +13,14 @@
 <body>
   <header class="site-header">
     <a href="#top" class="brand-lockup">
-      <img src="img/whoop_logo.png" alt="WHOOP logo reference" />
+      <img src="img/whoop_logo.png" alt="WHOOP logo" />
       <span>Performance Design Lab</span>
     </a>
 
     <nav>
       <a href="#email-lab">Email</a>
       <a href="#ad-lab">Ads</a>
-      <a href="#membership-lab">Membership</a>
-      <a href="#launch-lab">Launch</a>
+      <a href="#journey-lab">Journey</a>
       <a href="#optimization-lab">Optimize</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
@@ -32,13 +31,13 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Role Simulation Portfolio</p>
-        <h1>Designing the journey from body data to membership action.</h1>
+        <h1>Lifecycle creative built inside the customer journey.</h1>
         <p>
-          A WHOOP-inspired portfolio experience showing the work inside its real environment: inbox previews, opened emails, mobile ads, desktop ads, launch assets, membership education, and conversion improvements.
+          A WHOOP-inspired performance design experience showing how I would think through email, paid media, retention, landing pages, plan comparison, and conversion-focused design systems.
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="#email-lab">Start Journey</a>
+          <a class="btn primary" href="#email-lab">Start With Email</a>
           <a class="btn secondary" href="#optimization-lab">View Improvements</a>
         </div>
       </div>
@@ -49,19 +48,19 @@
     </section>
 
     <section class="journey-overview">
-      <article><span>01</span>Inbox hook</article>
-      <article><span>02</span>Email education</article>
-      <article><span>03</span>Paid media test</article>
-      <article><span>04</span>Membership decision</article>
-      <article><span>05</span>Conversion optimization</article>
+      <article><span>01</span>Inbox subject</article>
+      <article><span>02</span>Opened email</article>
+      <article><span>03</span>Click action</article>
+      <article><span>04</span>Plan page</article>
+      <article><span>05</span>Conversion logic</article>
     </section>
 
     <section id="email-lab" class="section">
       <div class="section-heading">
-        <p class="eyebrow">01 / Lifecycle Email Journey</p>
-        <h2>From inbox subject line to opened email.</h2>
+        <p class="eyebrow">01 / Lifecycle Email Lab</p>
+        <h2>Email shown in the real journey.</h2>
         <p>
-          Click through five lifecycle emails. Each one is designed around a different WHOOP product promise: recovery, Healthspan, sleep, strain, and membership conversion.
+          Click through five lifecycle campaigns. Each shows the subject line in an inbox, the opened email in a controlled scroll window, and the landing or membership page that follows the CTA.
         </p>
       </div>
 
@@ -78,44 +77,88 @@
 
         <article class="email-reader">
           <div class="email-top">
-            <span id="emailStage">Email 01 / Recovery</span>
-            <strong id="emailSubject">Quantify how your body is feeling.</strong>
+            <span id="emailStage">Email 01 / Acquisition</span>
+            <strong id="emailSubject">Your body has been trying to tell you something.</strong>
           </div>
 
-          <div class="email-body">
-            <img id="emailImage" src="img/whoop_quantify.png" alt="Campaign visual" />
+          <div class="email-scroll">
+            <div class="email-body">
+              <p class="eyebrow small" id="emailKicker">Daily Readiness</p>
+              <h3 id="emailHeadline">Turn body signals into better decisions.</h3>
 
-            <p class="eyebrow small" id="emailKicker">Recovery Insight</p>
-            <h3 id="emailHeadline">Higher recovery means you are ready for more.</h3>
-            <p id="emailCopy">
-              Understand how your body adapts to training, sleep deprivation, illness, or your cycle. When recovery is high, your body is signaling readiness. When it is low, the smarter move may be rest.
-            </p>
+              <p id="emailCopy">
+                Your body is constantly responding to training, sleep, stress, illness, and daily habits. WHOOP helps translate those signals into a simple question: what are you ready for today?
+              </p>
 
-            <div class="metric-card">
-              <span id="emailMetricLabel">Today’s Signal</span>
-              <strong id="emailMetric">82%</strong>
-              <p id="emailMetricText">Ready for higher output.</p>
+              <div class="email-supplement" id="emailSupplement">
+                <img id="emailImage" src="img/whoop_quantify.png" alt="Supporting campaign visual" />
+              </div>
+
+              <div class="metric-card">
+                <span id="emailMetricLabel">Campaign Hook</span>
+                <strong id="emailMetric">82%</strong>
+                <p id="emailMetricText">Recovery becomes a clear readiness signal.</p>
+              </div>
+
+              <div class="email-section">
+                <h4 id="emailSubhead">Why it matters</h4>
+                <p id="emailDetail">
+                  This campaign creates curiosity first, then quickly explains the value of measuring recovery, strain, and sleep together.
+                </p>
+              </div>
+
+              <button id="emailCta">Open Plan Page</button>
             </div>
-
-            <button id="emailCta">View Recovery</button>
           </div>
 
           <div class="strategy-note">
-            <span>Why this can increase engagement</span>
+            <span>Creative strategy</span>
             <p id="emailWhy">
-              The subject line creates curiosity, the email explains value in plain language, and the CTA connects the insight to a next action.
+              This email is built to acquire users by making biometric tracking feel simple, useful, and personal.
             </p>
           </div>
         </article>
+
+        <aside class="plan-preview">
+          <div class="plan-preview-top">
+            <span>After Email Click</span>
+            <strong id="planTitle">Recommended path</strong>
+          </div>
+
+          <div class="plan-card active" id="planOne">
+            <span>ONE</span>
+            <strong>$199/yr</strong>
+            <p>Sleep, Strain, Recovery, coaching, VO₂ Max, heart rate zones, and hormonal insights.</p>
+          </div>
+
+          <div class="plan-card" id="planPeak">
+            <span>PEAK</span>
+            <strong>$239/yr</strong>
+            <p>Everything in One, plus Healthspan, Pace of Aging, Health Monitor, and Stress Monitor.</p>
+          </div>
+
+          <div class="plan-card" id="planLife">
+            <span>LIFE</span>
+            <strong>$359/yr</strong>
+            <p>Everything in Peak, plus WHOOP MG, blood pressure insights, ECG readings, and AFib detection.</p>
+          </div>
+
+          <div class="strategy-note compact">
+            <span>Why this step matters</span>
+            <p id="planWhy">
+              The email CTA should land users on the plan that best matches the message they just clicked.
+            </p>
+          </div>
+        </aside>
       </div>
     </section>
 
     <section id="ad-lab" class="section">
       <div class="section-heading">
-        <p class="eyebrow">02 / Paid Media Environment</p>
-        <h2>Ads shown in mobile and desktop context.</h2>
+        <p class="eyebrow">02 / Paid Media Lab</p>
+        <h2>Mobile feed ad and desktop ad shown together.</h2>
         <p>
-          Each campaign concept has a mobile feed version and a desktop display version. The goal is to show how the same message adapts to different attention spans.
+          Each ad concept adapts the same message for two environments: a fast mobile feed and a wider desktop placement.
         </p>
       </div>
 
@@ -128,7 +171,7 @@
             <div class="mobile-ad-copy">
               <span id="adMobileLabel">Mobile Feed</span>
               <h3 id="adMobileHeadline">What is your body ready for today?</h3>
-              <p id="adMobileCopy">A fast-scanning mobile ad built around recovery readiness.</p>
+              <p id="adMobileCopy">A fast-scanning acquisition ad built around readiness.</p>
               <button id="adMobileCta">Learn More</button>
             </div>
           </div>
@@ -142,104 +185,58 @@
             <button id="adDesktopCta">Start Tracking</button>
           </div>
 
-          <div class="strategy-note">
+          <div class="strategy-note ad-note">
             <span>Testing hypothesis</span>
-            <p id="adWhy">This creative angle is designed to attract users who want a simple daily decision from complex body data.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="membership-lab" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">03 / Membership Education</p>
-        <h2>Turning product features into a lifestyle decision.</h2>
-        <p>
-          WHOOP is not only selling a wearable. It is selling an ongoing membership around performance, health, recovery, and long-term self-improvement.
-        </p>
-      </div>
-
-      <div class="membership-grid">
-        <article>
-          <span>ONE</span>
-          <h3>$199/yr</h3>
-          <p>Best for foundational fitness and recovery insights.</p>
-          <ul>
-            <li>WHOOP 5.0 with 14+ day battery</li>
-            <li>Sleep, Strain, and Recovery insights</li>
-            <li>Personalized coaching</li>
-            <li>VO₂ Max and heart rate zones</li>
-            <li>Women’s Hormonal Insights</li>
-          </ul>
-        </article>
-
-        <article class="featured">
-          <span>PEAK</span>
-          <h3>$239/yr</h3>
-          <p>Best for performance and longevity storytelling.</p>
-          <ul>
-            <li>Everything on WHOOP One</li>
-            <li>Healthspan and Pace of Aging</li>
-            <li>Health Monitor with health alerts</li>
-            <li>Real-time Stress Monitor</li>
-          </ul>
-        </article>
-
-        <article>
-          <span>LIFE</span>
-          <h3>$359/yr</h3>
-          <p>Best for advanced health and medical-grade positioning.</p>
-          <ul>
-            <li>Everything on WHOOP Peak</li>
-            <li>WHOOP MG with 14+ day battery</li>
-            <li>Daily Blood Pressure Insights</li>
-            <li>Heart Screener with ECG readings</li>
-            <li>On-demand AFib Detection</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="launch-lab" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">04 / Campaign Launch System</p>
-        <h2>One campaign idea across five environments.</h2>
-        <p>
-          Click each channel to see how the same launch theme adapts from email to social, display, landing page, and mobile app modules.
-        </p>
-      </div>
-
-      <div class="launch-tabs" id="launchTabs"></div>
-
-      <div class="launch-stage">
-        <div class="launch-visual">
-          <video id="launchVideo" src="img/whoop_16x9_1.mp4" autoplay muted loop playsinline></video>
-        </div>
-
-        <div class="launch-copy">
-          <span id="launchChannel">Landing Page Hero</span>
-          <h3 id="launchHeadline">Extend your prime for years to come.</h3>
-          <p id="launchCopy">
-            A campaign system built around Healthspan, daily habits, and the desire to slow Pace of Aging.
-          </p>
-          <button id="launchCta">Explore Healthspan</button>
-
-          <div class="strategy-note">
-            <span>Channel logic</span>
-            <p id="launchWhy">
-              The landing version has room to explain the lifestyle value behind the feature and connect it to membership.
+            <p id="adWhy">
+              This angle simplifies complex body data into one useful daily question.
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <section id="journey-lab" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">03 / Campaign Journey</p>
+        <h2>From campaign promise to membership decision.</h2>
+        <p>
+          This shows how a creative idea connects from email or ad click into a landing page and plan comparison experience.
+        </p>
+      </div>
+
+      <div class="journey-grid">
+        <article class="journey-card">
+          <span>Step 01</span>
+          <h3>Hook</h3>
+          <p>Lead with a question, metric, or benefit that makes the user want to know more.</p>
+        </article>
+
+        <article class="journey-card">
+          <span>Step 02</span>
+          <h3>Educate</h3>
+          <p>Explain the value of Recovery, Sleep, Strain, Healthspan, or coaching in plain language.</p>
+        </article>
+
+        <article class="journey-card">
+          <span>Step 03</span>
+          <h3>Match</h3>
+          <p>Guide users toward One, Peak, or Life based on the goal that brought them in.</p>
+        </article>
+
+        <article class="journey-card">
+          <span>Step 04</span>
+          <h3>Convert</h3>
+          <p>Make the next step clear with one primary CTA and a plan that feels aligned.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="optimization-lab" class="section">
       <div class="section-heading">
-        <p class="eyebrow">05 / Before and After</p>
+        <p class="eyebrow">04 / Before and After</p>
         <h2>Improving creative for clarity and conversion.</h2>
         <p>
-          This shows how a generic promo becomes a stronger performance marketing asset with sharper hierarchy, clearer proof, and a better CTA path.
+          A generic layout becomes a stronger performance asset when the message, metric, CTA, and scan path work together.
         </p>
       </div>
 
@@ -270,7 +267,7 @@
             <li>Metric becomes the headline</li>
             <li>Benefit is immediate</li>
             <li>CTA is visible above the fold</li>
-            <li>Message fits email, app, and paid media</li>
+            <li>Message works across email, app, and paid media</li>
           </ul>
         </article>
       </div>

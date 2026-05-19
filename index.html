@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Abdou Doumbouya | Performance Design Lab</title>
-  <meta name="description" content="A role-specific performance design portfolio showing lifecycle email, paid media, landing pages, membership conversion, campaign optimization, and design strategy." />
-
+  <meta name="description" content="A role-specific performance design portfolio showing lifecycle email, paid media, campaign optimization, and design strategy." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -16,7 +14,7 @@
 
   <header class="site-header">
     <a href="#top" class="brand-lockup">
-      <img src="img/whoop_logo.png" alt="WHOOP logo" />
+      <img src="img/whoop_logo_black.png" alt="WHOOP logo" />
       <span>Performance Design Lab</span>
     </a>
 
@@ -30,13 +28,12 @@
   </header>
 
   <main id="top">
-
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Role Simulation Portfolio</p>
         <h1>Showing the work behind performance creative.</h1>
         <p>
-          This is a guided portfolio experience built around the type of work required for a growth-focused graphic design role: lifecycle email, paid media, responsive design, testing logic, conversion improvements, scalable systems, and brand storytelling.
+          This is a guided portfolio experience built around lifecycle email, paid media, responsive design, testing logic, conversion improvements, scalable systems, and brand storytelling.
         </p>
 
         <div class="hero-actions">
@@ -65,106 +62,166 @@
     <section id="email-lab" class="section">
       <div class="section-heading">
         <p class="eyebrow">01 / Lifecycle Email Lab</p>
-        <h2>Email as a journey, not a flat graphic.</h2>
+        <h2>Email campaigns inside a real inbox experience.</h2>
         <p>
-          The goal is to show how I think through the complete path: inbox subject line, preview text, opened email, scroll behavior, CTA, and the plan page the user reaches after clicking.
+          The email work is shown the way a user actually experiences it: scanning subject lines, opening a message, reading the campaign, and clicking into the membership path.
         </p>
       </div>
 
       <div class="walkthrough-note glass-card">
         <span>Process note</span>
         <p>
-          I’m treating each email like a conversion moment. The creative job changes depending on the user: acquisition needs curiosity, retention needs habit, upsell needs aspiration, and conversion needs clarity.
+          This section shows that I understand email beyond a flat graphic. Subject line, preview text, hierarchy, opened-message design, CTA placement, and the next page all work together.
         </p>
       </div>
 
-      <div class="email-lab">
-        <aside class="phone-shell glass-card">
-          <div class="phone-speaker"></div>
-          <div class="phone-header">
-            <span>Inbox</span>
-            <strong>Today</strong>
+      <section class="mail-app glass-card">
+        <aside class="mail-sidebar">
+          <div class="window-dots">
+            <span></span><span></span><span></span>
           </div>
 
-          <div class="inbox-list" id="inboxList"></div>
+          <p class="mail-sidebar-label">Favorites</p>
+
+          <button class="mail-folder active">
+            <span>Inbox</span>
+            <strong>5</strong>
+          </button>
+
+          <button class="mail-folder">
+            <span>Sent</span>
+          </button>
+
+          <button class="mail-folder">
+            <span>Drafts</span>
+          </button>
+
+          <button class="mail-folder">
+            <span>Archive</span>
+          </button>
+
+          <div class="mail-sidebar-bottom">
+            <span>Lifecycle Campaign Set</span>
+          </div>
         </aside>
 
-        <article class="email-reader glass-card">
-          <div class="email-top">
-            <span id="emailStage">Email 01 / Acquisition</span>
-            <strong id="emailSubject">Your body has been trying to tell you something.</strong>
+        <aside class="mail-list-panel">
+          <div class="mail-list-header">
+            <div>
+              <h3>Inbox</h3>
+              <p>5 campaign emails, 2 unread</p>
+            </div>
+            <button>Filter</button>
           </div>
 
-          <div class="email-scroll">
-            <div class="email-body">
-              <p class="eyebrow small" id="emailKicker">Daily Readiness</p>
-              <h3 id="emailHeadline">Turn body signals into better decisions.</h3>
+          <div class="campaign-list" id="campaignList"></div>
+        </aside>
 
-              <p id="emailCopy">
-                Your body is constantly responding to training, sleep, stress, illness, and daily habits. WHOOP helps translate those signals into a simple question: what are you ready for today?
-              </p>
+        <article class="mail-reader-panel">
+          <div class="reader-toolbar">
+            <div class="toolbar-actions">
+              <button>Reply</button>
+              <button>Archive</button>
+              <button>Flag</button>
+            </div>
 
-              <div class="email-supplement" id="emailSupplement">
-                <img id="emailImage" src="img/whoop_quantify.png" alt="Supporting campaign visual" />
+            <a class="toolbar-join" href="https://join.whoop.com/us/en/" target="_blank" rel="noopener">
+              Open WHOOP Join
+            </a>
+          </div>
+
+          <div class="opened-email-window">
+            <div class="opened-email-header">
+              <div class="sender-avatar">W</div>
+
+              <div>
+                <strong id="openedSender">WHOOP Performance Lab</strong>
+                <p id="openedSubject">Your body has been trying to tell you something.</p>
+                <small id="openedMeta">To: Candidate Review Team · Campaign simulation</small>
               </div>
+            </div>
 
-              <div class="metric-card dark">
-                <span id="emailMetricLabel">Campaign Hook</span>
-                <strong id="emailMetric">82%</strong>
-                <p id="emailMetricText">Recovery becomes a clear readiness signal.</p>
-              </div>
+            <div class="opened-email-scroll">
+              <div class="opened-email-content">
+                <p class="eyebrow small" id="emailKicker">Daily Readiness</p>
+                <h3 id="emailHeadline">Turn body signals into better decisions.</h3>
 
-              <div class="email-section">
-                <h4 id="emailSubhead">Why it matters</h4>
-                <p id="emailDetail">
-                  This campaign creates curiosity first, then quickly explains the value of measuring recovery, strain, and sleep together.
+                <p id="emailCopy">
+                  Your body is constantly responding to training, sleep, stress, illness, and daily habits. WHOOP helps translate those signals into a simple question: what are you ready for today?
                 </p>
-              </div>
 
-              <button id="emailCta">Open Plan Page</button>
+                <div class="email-supplement" id="emailSupplement">
+                  <img id="emailImage" src="img/whoop_quantify.png" alt="Supporting campaign visual" />
+                </div>
+
+                <div class="metric-card dark">
+                  <span id="emailMetricLabel">Campaign Hook</span>
+                  <strong id="emailMetric">82%</strong>
+                  <p id="emailMetricText">Recovery becomes a clear readiness signal.</p>
+                </div>
+
+                <div class="email-section">
+                  <h4 id="emailSubhead">Why this approach works</h4>
+                  <p id="emailDetail">
+                    This is an acquisition email. The goal is to create curiosity without overwhelming the user with features.
+                  </p>
+                </div>
+
+                <a class="email-cta" id="emailCta" href="https://join.whoop.com/us/en/" target="_blank" rel="noopener">
+                  Open Plan Page
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="strategy-note">
+          <div class="strategy-note reader-note">
             <span>Creative strategy</span>
             <p id="emailWhy">
               This email is built to acquire users by making biometric tracking feel simple, useful, and personal.
             </p>
           </div>
         </article>
+      </section>
 
-        <aside class="plan-preview glass-card">
-          <div class="plan-preview-top">
-            <span>After Email Click</span>
-            <strong id="planTitle">Recommended path</strong>
+      <section class="mobile-mail-demo glass-card">
+        <div class="mobile-mail-top">
+          <span>Mobile inbox view</span>
+          <strong>Same campaign, phone-first behavior.</strong>
+        </div>
+
+        <div class="mobile-mail-grid">
+          <div class="mobile-inbox-phone">
+            <div class="phone-speaker"></div>
+            <div class="mobile-inbox-title">
+              <span>Inbox</span>
+              <strong>Today</strong>
+            </div>
+            <div id="mobileCampaignList"></div>
           </div>
 
-          <div class="plan-card active" id="planOne">
-            <span>ONE</span>
-            <strong>$199/yr</strong>
-            <p>Sleep, Strain, Recovery, coaching, VO₂ Max, heart rate zones, and hormonal insights.</p>
-          </div>
+          <div class="mobile-open-phone">
+            <div class="phone-speaker"></div>
+            <div class="mobile-open-header">
+              <strong id="mobileEmailSubject">Your body has been trying to tell you something.</strong>
+              <small>WHOOP Performance Lab</small>
+            </div>
 
-          <div class="plan-card" id="planPeak">
-            <span>PEAK</span>
-            <strong>$239/yr</strong>
-            <p>Everything in One, plus Healthspan, Pace of Aging, Health Monitor, and Stress Monitor.</p>
+            <div class="mobile-open-scroll">
+              <p class="eyebrow small" id="mobileEmailKicker">Daily Readiness</p>
+              <h3 id="mobileEmailHeadline">Turn body signals into better decisions.</h3>
+              <p id="mobileEmailCopy">
+                Your body is constantly responding to training, sleep, stress, illness, and daily habits.
+              </p>
+              <div class="metric-card dark">
+                <span id="mobileMetricLabel">Campaign Hook</span>
+                <strong id="mobileMetric">82%</strong>
+                <p id="mobileMetricText">Recovery becomes a clear readiness signal.</p>
+              </div>
+              <a href="https://join.whoop.com/us/en/" target="_blank" rel="noopener" class="email-cta">Open Plan Page</a>
+            </div>
           </div>
-
-          <div class="plan-card" id="planLife">
-            <span>LIFE</span>
-            <strong>$359/yr</strong>
-            <p>Everything in Peak, plus WHOOP MG, blood pressure insights, ECG readings, and AFib detection.</p>
-          </div>
-
-          <div class="strategy-note compact">
-            <span>Why this step matters</span>
-            <p id="planWhy">
-              The email CTA should land users on the plan that best matches the message they just clicked.
-            </p>
-          </div>
-        </aside>
-      </div>
+        </div>
+      </section>
     </section>
 
     <section id="ad-lab" class="section">
@@ -179,7 +236,7 @@
       <div class="walkthrough-note glass-card">
         <span>Process note</span>
         <p>
-          Instead of making one “nice” ad, I would build a test set: acquisition, retention, upsell, performance, and conversion. Each one has a different audience motivation and learning goal.
+          Instead of making one nice ad, I would build a test set: acquisition, retention, upsell, performance, and conversion. Each one has a different audience motivation and learning goal.
         </p>
       </div>
 
@@ -221,7 +278,7 @@
         <p class="eyebrow">03 / Before and After Lab</p>
         <h2>A weaker campaign rebuilt for performance.</h2>
         <p>
-          This section shows the difference between making something look branded and making something work. The “before” is intentionally realistic: visually acceptable, but not strategically clear. The “after” solves the pain points.
+          This section shows the difference between making something look branded and making something work. The before is visually acceptable, but not strategically clear. The after solves the pain points.
         </p>
       </div>
 
@@ -270,22 +327,6 @@
           </ul>
         </article>
       </div>
-
-      <div class="result-panel glass-card">
-        <span>Expected performance lift</span>
-        <div>
-          <strong>Clearer scan path</strong>
-          <p>Users understand the value in seconds.</p>
-        </div>
-        <div>
-          <strong>Stronger CTA logic</strong>
-          <p>The button continues the promise instead of interrupting it.</p>
-        </div>
-        <div>
-          <strong>Reusable system</strong>
-          <p>The same structure can scale into email, ad, app module, and landing hero.</p>
-        </div>
-      </div>
     </section>
 
     <section id="designer-lab" class="section designer-section">
@@ -329,7 +370,7 @@
           </p>
 
           <p>
-            I bring a hybrid design background that combines brand craft, responsive web thinking, fast iteration, AI-assisted exploration, and production-level attention to detail. I’m interested in WHOOP because the product sits at the intersection of data, behavior, performance, health, and lifestyle. That is exactly the type of brand world where strong design can make complex information feel simple, motivating, and valuable.
+            I bring a hybrid design background that combines brand craft, responsive web thinking, fast iteration, AI-assisted exploration, and production-level attention to detail. I’m interested in WHOOP because the product sits at the intersection of data, behavior, performance, health, and lifestyle.
           </p>
         </article>
       </div>
@@ -340,7 +381,6 @@
       <h2>Built to perform. Ready to iterate.</h2>
       <a class="btn primary" href="mailto:caliph.safe@gmail.com">caliph.safe@gmail.com</a>
     </section>
-
   </main>
 
   <script src="script.js"></script>

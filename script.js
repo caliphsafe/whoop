@@ -193,10 +193,43 @@ function setEmail(index) {
   if (mobileScroll) mobileScroll.scrollTop = 0;
 }
 
+function openMobileEmailScreen() {
+  const inboxScreen = document.getElementById("mobileInboxScreen");
+  const openScreen = document.getElementById("mobileOpenScreen");
+
+  if (!inboxScreen || !openScreen) return;
+
+  inboxScreen.classList.remove("active");
+  openScreen.classList.add("active");
+}
+
+function openMobileInboxScreen() {
+  const inboxScreen = document.getElementById("mobileInboxScreen");
+  const openScreen = document.getElementById("mobileOpenScreen");
+
+  if (!inboxScreen || !openScreen) return;
+
+  openScreen.classList.remove("active");
+  inboxScreen.classList.add("active");
+}
+
 document.addEventListener("click", (event) => {
   const emailButton = event.target.closest(".mail-campaign, .mobile-campaign");
-  if (emailButton) setEmail(Number(emailButton.dataset.email));
+
+  if (emailButton) {
+    setEmail(Number(emailButton.dataset.email));
+
+    if (emailButton.classList.contains("mobile-campaign")) {
+      openMobileEmailScreen();
+    }
+  }
 });
+
+const mobileBackBtn = document.getElementById("mobileBackBtn");
+
+if (mobileBackBtn) {
+  mobileBackBtn.addEventListener("click", openMobileInboxScreen);
+}
 
 const ads = [
   {

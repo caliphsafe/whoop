@@ -1204,3 +1204,73 @@ h1,
     font-size: 52px;
   }
 }
+
+.email-brand-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.email-brand-row img {
+  width: 92px;
+  height: auto;
+}
+
+.single-mobile-mail-phone {
+  width: min(390px, 100%);
+  margin: 0 auto;
+  border: 7px solid #111;
+  border-radius: 34px;
+  background: #fff;
+  padding: 16px;
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.mobile-screen {
+  display: none;
+}
+
+.mobile-screen.active {
+  display: block;
+}
+
+.mobile-back-btn {
+  border: 0;
+  background: rgba(0,0,0,0.06);
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.mobile-open-header img {
+  width: 88px;
+  height: auto;
+  margin-bottom: 18px;
+}
+
+.mobile-open-scroll {
+  height: 430px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.mobile-open-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mobile-open-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.16);
+  border-radius: 999px;
+}
+
+@media (max-width: 850px) {
+  .single-mobile-mail-phone {
+    min-height: 600px;
+  }
+
+  .mobile-open-scroll {
+    height: 410px;
+  }
+}

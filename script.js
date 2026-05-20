@@ -56,7 +56,7 @@ const emails = [
     metricText: "Recovery becomes a clear readiness signal.",
     subhead: "Why this approach works",
     detail: "This is an acquisition email. The goal is to create curiosity without overwhelming the user with features. The email turns the product into a daily decision-making tool.",
-    cta: "Open Plan Page",
+    cta: "Join Now",
     why: "This email is built to acquire users by making biometric tracking feel simple, useful, and personal."
   },
   {

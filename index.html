@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Abdou Doumbouya | Performance Design Lab</title>
   <meta name="description" content="A role-specific performance design portfolio showing lifecycle email, paid media, campaign optimization, and design strategy." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -78,7 +81,16 @@
         </p>
       </div>
 
-      <section class="mail-app glass-card">
+      <div class="email-view-toggle glass-card">
+        <button class="email-view-btn active" type="button" data-email-view="desktop">
+          Desktop Inbox
+        </button>
+        <button class="email-view-btn" type="button" data-email-view="mobile">
+          Mobile Inbox
+        </button>
+      </div>
+
+      <section class="mail-app glass-card email-view-panel email-desktop-view active">
         <aside class="mail-sidebar">
           <div class="window-dots">
             <span></span><span></span><span></span>
@@ -186,7 +198,7 @@
         </article>
       </section>
 
-      <section class="mobile-mail-demo glass-card">
+      <section class="mobile-mail-demo glass-card email-view-panel email-mobile-view">
         <div class="mobile-mail-top">
           <span>Mobile inbox view</span>
           <strong>Same campaign, phone-first behavior.</strong>

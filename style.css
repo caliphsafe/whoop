@@ -29,7 +29,7 @@ body {
     radial-gradient(circle at 85% 20%, rgba(74,83,255,0.09), transparent 24%),
     var(--bg);
   color: var(--ink);
-  font-family: Inter, Arial, sans-serif;
+  font-family: "Manrope", Arial, sans-serif;
   overflow-x: hidden;
 }
 

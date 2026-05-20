@@ -32,17 +32,6 @@ body {
   font-family: "Manrope", Arial, sans-serif;
   overflow-x: hidden;
 }
-h1,
-h2,
-h3,
-h4,
-.brand-lockup,
-.nav-cta,
-.btn,
-.email-cta {
-  font-family: "Manrope", Arial, sans-serif;
-  font-weight: 800;
-}
 
 img,
 video {
@@ -62,6 +51,19 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand-lockup,
+.nav-cta,
+.btn,
+.email-cta,
+.toolbar-join {
+  font-family: "Manrope", Arial, sans-serif;
+  font-weight: 800;
 }
 
 .background-orb {
@@ -325,13 +327,52 @@ h1,
   margin: 8px 0 0;
 }
 
+/* EMAIL TOGGLE */
+
+.email-view-toggle {
+  width: max-content;
+  max-width: 100%;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 999px;
+  margin: 0 0 18px;
+}
+
+.email-view-btn {
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  padding: 10px 15px;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.email-view-btn.active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 12px 34px rgba(74,83,255,0.2);
+}
+
+.email-view-panel {
+  display: none;
+}
+
+.email-view-panel.active.email-desktop-view {
+  display: grid;
+}
+
+.email-view-panel.active.email-mobile-view {
+  display: block;
+}
+
 /* MAIL APP */
 
 .mail-app {
   border-radius: 34px;
   overflow: hidden;
   min-height: 680px;
-  display: grid;
   grid-template-columns: 170px 310px minmax(0, 1fr);
 }
 
@@ -635,8 +676,10 @@ h1,
   margin: 16px 0 0;
 }
 
+/* MOBILE MAIL */
+
 .mobile-mail-demo {
-  margin-top: 28px;
+  margin-top: 0;
   border-radius: 34px;
   padding: 24px;
 }
@@ -762,7 +805,7 @@ h1,
   margin: 0 0 12px;
 }
 
-/* EXISTING AD / OPTIMIZATION / DESIGNER */
+/* ADS */
 
 .ad-lab {
   display: grid;
@@ -896,6 +939,8 @@ h1,
   margin: 0;
 }
 
+/* OPTIMIZATION + DESIGNER */
+
 .optimization-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1015,15 +1060,11 @@ h1,
   padding-bottom: 130px;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: 0.75s ease;
-}
-
+.reveal,
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  transition: none;
 }
 
 @media (max-width: 1150px) {
@@ -1116,6 +1157,16 @@ h1,
 
   .section {
     padding: 72px 0;
+  }
+
+  .email-view-toggle {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .email-view-btn {
+    width: 100%;
   }
 
   .mail-app {

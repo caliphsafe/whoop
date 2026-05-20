@@ -1,19 +1,4 @@
-const revealItems = document.querySelectorAll(
-  ".section, .process-strip, .mail-app, .mobile-mail-demo, .ad-selector, .ad-stage, .campaign-before, .campaign-after, .designer-card, .cover-letter"
-);
-
-revealItems.forEach((item) => item.classList.add("reveal"));
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
-    });
-  },
-  { threshold: 0.12 }
-);
-
-revealItems.forEach((item) => observer.observe(item));
+document.documentElement.classList.add("page-ready");
 
 const header = document.querySelector(".site-header");
 

@@ -6,6 +6,41 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 40);
 });
 
+const emailViewButtons = document.querySelectorAll(".email-view-btn");
+const emailViewPanels = document.querySelectorAll(".email-view-panel");
+
+function setEmailView(view) {
+  emailViewButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.emailView === view);
+  });
+
+  emailViewPanels.forEach((panel) => {
+    panel.classList.remove("active");
+  });
+
+  const targetPanel = document.querySelector(`.email-${view}-view`);
+
+  if (targetPanel) {
+    targetPanel.classList.add("active");
+  }
+}
+
+emailViewButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setEmailView(button.dataset.emailView);
+  });
+});
+
+const mobileQuery = window.matchMedia("(max-width: 850px)");
+
+function setDefaultEmailView() {
+  setEmailView(mobileQuery.matches ? "mobile" : "desktop");
+}
+
+setDefaultEmailView();
+
+mobileQuery.addEventListener("change", setDefaultEmailView);
+
 const emails = [
   {
     stage: "Acquisition",

@@ -32,6 +32,17 @@ body {
   font-family: "Manrope", Arial, sans-serif;
   overflow-x: hidden;
 }
+h1,
+h2,
+h3,
+h4,
+.brand-lockup,
+.nav-cta,
+.btn,
+.email-cta {
+  font-family: "Manrope", Arial, sans-serif;
+  font-weight: 800;
+}
 
 img,
 video {

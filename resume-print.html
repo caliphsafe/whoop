@@ -23,6 +23,46 @@
       print-color-adjust: exact;
     }
 
+    .resume-controls {
+      position: sticky;
+      top: 20px;
+      z-index: 999;
+      width: fit-content;
+      margin: 24px auto -10px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .resume-control-btn {
+      appearance: none;
+      border: 0;
+      text-decoration: none;
+      font-family: "Manrope", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .resume-control-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .resume-control-btn.primary {
+      background: #4A53FF;
+      color: white;
+      box-shadow: 0 10px 30px rgba(74,83,255,0.22);
+    }
+
+    .resume-control-btn.secondary {
+      background: rgba(255,255,255,0.92);
+      color: #111111;
+      border: 1px solid rgba(0,0,0,0.08);
+      backdrop-filter: blur(12px);
+    }
+
     .page {
       width: 8.5in;
       min-height: 11in;
@@ -96,6 +136,25 @@
     .contact a {
       color: #4A53FF;
       text-decoration: none;
+    }
+
+    .capabilities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .capabilities span,
+    .tools span {
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(74,83,255,0.04);
     }
 
     .section {
@@ -203,18 +262,13 @@
       gap: 10px;
     }
 
-    .tools span {
-      border: 1px solid rgba(0,0,0,0.08);
-      border-radius: 999px;
-      padding: 9px 12px;
-      font-size: 12px;
-      font-weight: 700;
-      background: rgba(74,83,255,0.04);
-    }
-
     @media print {
       body {
         background: #ffffff;
+      }
+
+      .resume-controls {
+        display: none !important;
       }
 
       .page {
@@ -225,9 +279,46 @@
         page-break-after: avoid;
       }
     }
+
+    @media (max-width: 900px) {
+      .page {
+        width: calc(100% - 24px);
+        padding: 32px;
+      }
+
+      .topbar,
+      .experience-head {
+        flex-direction: column;
+      }
+
+      .contact {
+        text-align: left;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .resume-controls {
+        width: calc(100% - 24px);
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
   </style>
 </head>
+
 <body>
+  <div class="resume-controls">
+    <a href="resume.html" class="resume-control-btn secondary">
+      ← Back to Resume
+    </a>
+
+    <button class="resume-control-btn primary" onclick="window.print()">
+      Download PDF / Print
+    </button>
+  </div>
+
   <div class="page">
     <div class="accent-orb orb-one"></div>
     <div class="accent-orb orb-two"></div>
@@ -238,6 +329,16 @@
         <p>
           Performance creative designer and creative technologist with 15+ years of experience across advertising, branding, responsive web experiences, campaign systems, lifecycle marketing, and conversion focused design.
         </p>
+
+        <div class="capabilities">
+          <span>Lifecycle Email</span>
+          <span>Paid Media Creative</span>
+          <span>Responsive UX</span>
+          <span>Campaign Systems</span>
+          <span>Figma</span>
+          <span>Adobe Creative Suite</span>
+          <span>AI Workflows</span>
+        </div>
       </div>
 
       <div class="contact">
@@ -259,7 +360,7 @@
     <section class="section">
       <div class="section-label">Profile</div>
       <div class="summary">
-        Creative work built around visual clarity, brand consistency, responsive behavior, and conversion paths. Experience spans lifecycle marketing, paid and organic creative, campaign systems, responsive web experiences, presentation design, digital branding, and production ready asset workflows.
+        Creative work built around visual clarity, responsive behavior, scalable systems, and conversion focused experiences across digital marketing, lifecycle style campaigns, web design, paid creative, and brand development. Comfortable moving between strategy, execution, iteration, and production ready delivery across modern digital environments.
       </div>
     </section>
 
@@ -279,6 +380,7 @@
           <li>Designed and developed responsive digital experiences across branding, portfolio, fashion, restaurant, and event based websites.</li>
           <li>Built interactive campaign systems, conversion focused landing pages, embedded preview experiences, and scalable front end structures optimized for responsive behavior, visual clarity, and user engagement across desktop and mobile environments.</li>
           <li>Used AI assisted workflows to accelerate concepting, iteration, and creative production across web, branding, and marketing initiatives.</li>
+          <li>Designed responsive experiences across multiple industries with a strong focus on mobile first UX, presentation clarity, and conversion focused structure.</li>
         </ul>
       </article>
 
@@ -294,7 +396,8 @@
         <ul>
           <li>Lead creative direction across branding, digital marketing, responsive web design, campaign systems, apparel graphics, and promotional materials for businesses and organizations.</li>
           <li>Designed responsive websites, social campaigns, print assets, and scalable brand systems while translating business objectives into clear visual communication and customer facing experiences.</li>
-          <li>Managed production ready deliverables and creative workflows across multiple simultaneous projects.</li>
+          <li>Managed simultaneous creative systems across web, print, social, and promotional environments for multiple businesses and organizations.</li>
+          <li>Maintained production ready deliverables, organized workflows, and scalable asset structures across ongoing campaigns and client initiatives.</li>
         </ul>
       </article>
 
@@ -311,6 +414,7 @@
           <li>Developed digital marketing assets and campaign creative across social media, paid advertising, and music promotion.</li>
           <li>Designed content systems for Facebook Ads, Google Ads, artist campaigns, and audience engagement initiatives with a focus on acquisition, visibility, and performance driven creative direction.</li>
           <li>Created campaign variations and platform specific creative optimized for audience engagement, paid performance, and rapid iteration across digital channels.</li>
+          <li>Supported campaigns contributing to over 1M+ music streams through digital promotion, audience focused messaging, and rapid creative iteration.</li>
         </ul>
       </article>
 

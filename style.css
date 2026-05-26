@@ -1274,3 +1274,140 @@ h1,
     height: 410px;
   }
 }
+
+.resume-hero {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+  padding: 150px 0 54px;
+}
+
+.resume-hero h1 {
+  margin: 0;
+  font-size: clamp(52px, 7vw, 108px);
+  line-height: 0.88;
+  letter-spacing: -0.08em;
+}
+
+.resume-hero p {
+  color: var(--muted);
+  font-size: clamp(17px, 1.8vw, 21px);
+  line-height: 1.58;
+  max-width: 820px;
+}
+
+.resume-page {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto 120px;
+  border-radius: 36px;
+  padding: clamp(24px, 4vw, 46px);
+}
+
+.resume-header-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.resume-header-grid h2 {
+  margin: 0 0 12px;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 0.92;
+  letter-spacing: -0.075em;
+}
+
+.resume-header-grid p,
+.resume-section p,
+.resume-role li,
+.resume-skill-grid p {
+  color: var(--muted);
+  line-height: 1.58;
+}
+
+.resume-contact-card {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 24px;
+  padding: 20px;
+  background: rgba(255,255,255,0.62);
+}
+
+.resume-section {
+  padding: 34px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.resume-section:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.resume-section > span {
+  display: block;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 16px;
+}
+
+.resume-role {
+  margin-bottom: 28px;
+}
+
+.resume-role:last-child {
+  margin-bottom: 0;
+}
+
+.resume-role h3 {
+  margin: 0 0 4px;
+  font-size: 28px;
+  letter-spacing: -0.05em;
+}
+
+.resume-meta {
+  margin-top: 0;
+  font-weight: 800;
+  color: var(--ink) !important;
+}
+
+.resume-role ul {
+  margin: 14px 0 0;
+  padding-left: 20px;
+}
+
+.resume-role li {
+  margin-bottom: 8px;
+}
+
+.resume-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.resume-skill-grid div {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 24px;
+  padding: 20px;
+  background: rgba(255,255,255,0.62);
+}
+
+.resume-skill-grid strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+}
+
+@media (max-width: 900px) {
+  .resume-header-grid,
+  .resume-skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-hero {
+    padding-top: 130px;
+  }
+}
